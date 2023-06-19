@@ -1,0 +1,13 @@
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.navbar-brand-pc {
+    font-weight: 800;
+    color: #ffc107;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
