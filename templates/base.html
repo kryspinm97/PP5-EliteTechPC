@@ -2,260 +2,222 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
 
-    {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
+<head>
 
-    {% block extra_meta %}
-    {% endblock %}
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock %}
 
-    {% block corecss %}
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  {% block corecss %}
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
 
-    {% block corejs %}
-    <!-- Bootstrap , jQuery , Popper, Font Awesome-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d52c198970.js" crossorigin="anonymous"></script>
+  {% block extra_css %}
+  {% endblock %}
 
-    {% endblock %}
+  {% block corejs %}
+  <!-- Bootstrap , jQuery , Popper, Font Awesome-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+  </script>
+  <script src="https://kit.fontawesome.com/d52c198970.js" crossorigin="anonymous"></script>
 
-    {% block extra_js %}
-    {% endblock %}
+  {% endblock %}
 
-    <title>Elite Tech PC {% block extra_title %}{% endblock %}</title>
+  {% block extra_js %}
+  {% endblock %}
 
-  </head>
+  <title>Elite Tech PC {% block extra_title %}{% endblock %}</title>
 
-  <body>
+</head>
 
-    <!-- NAV BAR SECTION -->
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">EliteTech<span class="navbar-brand-pc">PC</span></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Products
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Low-Level</a>
-              <a class="dropdown-item" href="#">Mid-Level</a>
-              <a class="dropdown-item" href="#">High-End</a>
-              <a class="dropdown-item" href="#">Ultimate-Level</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">About Us</a>
+  <!-- NAV BAR SECTION -->
+
+  <header class="container-fluid fixed-top">
+    <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <a href="" class="nav-link main-logo-link">
+          <h2 class="logo-font text-black my-0">EliteTech<span class="navbar-brand-pc">PC</span></h2>
+        </a>
+      </div>
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <form method="GET" action="">
+          <div class="input-group w-100">
+            <input class="form-control border border-black type=" text="text" name="q" placeholder="Search our site">
+            <div class="input-group-append">
+              <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                <span class="icon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </button>
             </div>
-          </li>
-        </ul>
-    
-        <form class="form-inline mx-auto my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </div>
         </form>
-
-        
-    
-        <ul class="navbar-nav justify-content-center align-items-center">
-          <li class="nav-item dropdown text-center">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              My Account
+      </div>
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <ul class=" list-inline list-unstyled text-center text-lg-right my-0">
+          <li class=" list-inline-item dropdown">
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="navbar-right text-center">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0">My Account</p>
+              </div>
             </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAccount">
-              <a class="dropdown-item" href="#">Profile</a>
-              <a class="dropdown-item" href="#">Orders</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Logout</a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+              <a href="" class="dropdown-item">Product Management</a>
+              {% endif %}
+              <a href="" class="dropdown-item">My Profile</a>
+              <a href="" class="dropdown-item">Logout</a>
+              {% else %}
+              <a href="" class="dropdown-item">Register</a>
+              <a href="" class="dropdown-item">Login</a>
+              {% endif %}
             </div>
           </li>
-          <li class="nav-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
-              <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+          <li class="list-inline-item">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+              <div class="navbar-right text-center">
+                <div><i class="fa-solid fa-cart-shopping"></i></div>
                 <p class="my-0">
                   {% if grand_total %}
-                    ${{ grand_total|floatformat:2 }}
+                  €{{ grand_total|floatformat:2 }}
                   {% else %}
-                    $0.00
+                  €0.00
                   {% endif %}
                 </p>
               </div>
             </a>
           </li>
-
         </ul>
       </div>
-    </nav>
-    
-    
-
-    <!-- NAV BAR SECTION -->
-
-    {% block content %}
-    {% endblock %}
-
-    <!-- FOOTER SECTION -->
-
-<footer class="text-center text-lg-start bg-white text-muted">
-  <section class="d-flex justify-content-center align-items-center justify-content-lg-between p-4 border-bottom">
-    <div class="container-fluid align-items-center justify-content-center">
-      <!-- Section: Social media -->
-      <section class="">
-        <!-- Facebook -->
-        <a
-          class="btn text-white btn-floating m-1"
-          style="background-color: #3b5998;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-  
-        <!-- Twitter -->
-        <a
-          class="btn text-white btn-floating m-1"
-          style="background-color: #55acee;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-        <!-- Google -->
-        <a
-          class="btn text-white btn-floating m-1"
-          style="background-color: #dd4b39;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-google"></i
-        ></a>
-  
-        <!-- Instagram -->
-        <a
-          class="btn text-white btn-floating m-1"
-          style="background-color: #ac2bac;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-instagram"></i
-        ></a>
-  
-        <!-- Linkedin -->
-        <a
-          class="btn text-white btn-floating m-1"
-          style="background-color: #0082ca;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-        <!-- Github -->
-        <a
-          class="btn text-white btn-floating m-1"
-          style="background-color: #333333;"
-          href="#!"
-          role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-      </section>
-      <!-- Section: Social media -->
     </div>
-  </section>
-
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <div class="row mt-3">
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3 text-secondary"></i> Elite Tech PC
-          </h6>
-          <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
-          </p>
-        </div>
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
-            Products
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Entry Level</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Mid Level</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">High End</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Ultimate</a>
-          </p>
-        </div>
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Pricing</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
-          <p>
-            <i class="fas fa-envelope me-3 text-secondary"></i>
-            info@example.com
-          </p>
-          <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
-        </div>
+    <div class="row bg-white">
+      <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+          aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        {% include 'includes/mobile-top-header.html' %}
+        {% include 'includes/main-nav.html' %}
+      </nav>
+    </div>
+    <div id="delivery-banner" class="row text-center">
+      <div class="col">
+        <h4 class="my-1 text-uppercase fw-bold">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
       </div>
     </div>
-  </section>
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-    © 2023 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">EliteTechPC.com - Kryspin</a>
-  </div>
-</footer>
-
-<!-- FOOTER SECTION -->
+  </header>
 
 
-    {% if messages %}
-    <div class ="message-container"></div>
-    {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+  <!-- NAV BAR SECTION -->
 
-    {% block postloadjs %}
-    {% endblock %}
+  {% block content %}
+  {% endblock %}
 
-  </body>
+  <!-- FOOTER SECTION -->
+
+  <footer class="text-center text-lg-start">
+    <section class="py-4">
+      <div class="footer-headers fa-footer-icons container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class=" col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3 footer-fa-icon-colors"></i> Elite Tech PC
+            </h6>
+            <p>
+              Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+              Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+              Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Entry Level</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Mid Level</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">High End</a>
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+
+          <div class="fa-footer-icons col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3 footer-fa-icon-colors"></i> Dublin, Ireland</p>
+            <p>
+              <i class="fas fa-envelope me-3 footer-fa-icon-colors"></i>
+              info@elitetechpcstore.com
+            </p>
+            <p><i class="fas fa-phone me-3 footer-fa-icon-colors"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3 footer-fa-icon-colors"></i> + 01 234 567 89</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">EliteTechPC.com - Kryspin</a>
+    </div>
+  </footer>
+
+  <!-- FOOTER SECTION -->
+
+
+  {% if messages %}
+  <div class="message-container"></div>
+  {% endif %}
+
+  {% block page_header %}
+  {% endblock %}
+
+  {% block postloadjs %}
+  {% endblock %}
+
+</body>
+
 </html>
-

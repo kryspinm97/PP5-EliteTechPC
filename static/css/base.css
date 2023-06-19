@@ -1,13 +1,123 @@
-.navbar-brand {
-    font-size: 1.6rem;
-    font-weight: 800;
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar-right {
+    color: #343A40;
+}
+
+
+/**** BASE HOME PAGE ****/
+
+#delivery-banner {
+    color: #ffffff;
+    background-color: #007bff;
 }
 
 .navbar-brand-pc {
     font-weight: 800;
-    color: #ffc107;
+    color: #007bff;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
+.hero-image-home {
+    background-image: url(/media/PC-PARTS.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    position: relative;
+    z-index: 0;
+    /* Add this line */
+}
+
+.hero-image-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+    z-index: -1;
+}
+
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero-text h1 {
+    font-size: 5rem;
+    color: #ffff;
+    text-transform: uppercase;
+}
+
+.hero-text button {
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #FFC107;
+    border-style: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+.logo-font {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #343A40;
+}
+
+/**** BASE HOME PAGE ****/
+
+.fa-footer-icons .footer-fa-icon-colors {
+    color: #007bff;
+}
+
+/*-- CARDS --*/
+
+.card-img-top {
+    max-width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.card-img-view {
+    object-fit: cover;
+}
+
+.card-img-index {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-home {
+    box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-weight: 800;
+}
+
+.card button {
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #007bff;
+    border-style: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+}
+
+/*-- CARDS --*/
+
+.footer-headers h6 {
+    font-weight: 800;
+}
+
+.icon i {
+    color: #007bff;
 }
