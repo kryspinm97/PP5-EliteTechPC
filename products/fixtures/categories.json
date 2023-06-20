@@ -1,0 +1,11 @@
+[
+    {
+      "model": "products.category",
+      "pk": 1,
+      "fields": {
+        "name": "Low End"
+      }
+    }
+  ]
+  
+  

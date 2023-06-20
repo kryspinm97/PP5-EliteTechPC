@@ -1,0 +1,37 @@
+[
+    {
+      "model": "products.prebuiltpc",
+      "pk": 1,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC1",
+        "name": "Low End PC 1",
+        "processor": "Intel i3",
+        "graphics_card": "NVIDIA GeForce GTX 1650",
+        "ram": "8GB DDR4",
+        "storage": "256GB SSD",
+        "price": 599.99,
+        "rating": 4.5,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 2,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC2",
+        "name": "Low End PC 2",
+        "processor": "AMD Ryzen 3",
+        "graphics_card": "AMD Radeon RX 550",
+        "ram": "4GB DDR4",
+        "storage": "1TB HDD",
+        "price": 449.99,
+        "rating": 3.8,
+        "image": null,
+        "image_url": null
+      }
+    }
+  ]
+  
