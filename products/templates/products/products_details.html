@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="product-details container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="product-image">
+        <img class="img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+        <div class="">
+          {% if product.rating %}
+            <p class="lead mb-0 text-muted"><i class="fas fa-star"></i> {{ product.rating }}/5</p>
+          {% else %}
+            <p class="lead mb-0 text-muted">No Rating</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 align-items-center text-center">
+      <div class="product-details">
+        <h2 class="">{{ product.name }}</h2>
+        <p class="">{{ product.description }}</p>
+        <div class="">
+          <h6><strong>Processor:</strong> {{ product.processor }}</h6>
+          <h6><strong>Graphics Card:</strong> {{ product.graphics_card }}</h6>
+          <h6><strong>RAM:</strong> {{ product.ram }}</h6>
+          <h6><strong>Storage:</strong> {{ product.storage }}</h6>
+          <!-- Add more specifications as needed -->
+        </div>
+        <hr>
+        <h4 class="fw-bold">Price: €{{ product.price }}</h4>
+      </div>
+      <a class="add-cart-button btn text-uppercase py-3">Add to Cart</a>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
