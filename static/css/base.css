@@ -95,7 +95,7 @@ body {
 
 .card-img-index {
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .card-home {

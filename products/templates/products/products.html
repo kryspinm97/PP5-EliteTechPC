@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load custom_filters %}
 
 {% block content %}
 
@@ -9,15 +10,25 @@
       {% for product in products %}
       <div class="col-md-6 py-4">
         <div class="card card-home h-100">
-          <img class="card-img-index card-image" src="#" alt="{{ product.name }}">
+          <img class="card-img-index card-image" src="{{ product.image.url }}" alt="{{ product.name }}">
           <div class="card-body text-center">
             <h3 class="card-title fw-bold text-center text-uppercase">{{ product.name }}</h3>
             <p class="card-text">Processor: {{ product.processor }}</p>
             <p class="card-text">Graphics Card: {{ product.graphics_card }}</p>
             <p class="card-text">RAM: {{ product.ram }}</p>
             <p class="card-text">Storage: {{ product.storage }}</p>
-            <p class="card-text">Price: ${{ product.price }}</p>
-            <button>Show More</button>
+          </div>
+          <div class="card-footer bg-white pt-0 border-0 text-right">
+            <div class="row">
+              <div class="col">
+                <p class="lead mb-0 text-center font-weight-bold">€{{ product.price }}</p>
+                {% if product.rating %}
+                  <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                {% else %}
+                  <small class="text-muted">No Rating</small>
+                {% endif %}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -25,5 +36,6 @@
     </div>
   </div>
 </section>
+
 
 {% endblock %}
