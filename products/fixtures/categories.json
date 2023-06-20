@@ -1,11 +1,24 @@
-[
-    {
-      "model": "products.category",
-      "pk": 1,
-      "fields": {
-        "name": "Low End"
-      }
+[{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "low-end"
     }
-  ]
-  
-  
+  }
+  ,
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "mid-end"
+    }
+  }
+  ,
+  {
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+      "name": "high-end"
+    }
+  }
+]

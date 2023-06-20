@@ -32,6 +32,550 @@
         "image": null,
         "image_url": null
       }
-    }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 5,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC1",
+        "name": "Gaming Beast",
+        "processor": "Intel Core i9",
+        "graphics_card": "NVIDIA GeForce RTX 3080",
+        "ram": "32GB DDR4",
+        "storage": "1TB NVMe SSD",
+        "price": 1999.99,
+        "rating": 4.8,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 4,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC1",
+        "name": "Mid-Range PC",
+        "processor": "Intel Core i5",
+        "graphics_card": "NVIDIA GeForce GTX 1660",
+        "ram": "16GB DDR4",
+        "storage": "512GB SSD",
+        "price": 899.99,
+        "rating": 4.0,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 3,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC3",
+        "name": "Budget PC",
+        "processor": "AMD Athlon",
+        "graphics_card": "Integrated Graphics",
+        "ram": "4GB DDR4",
+        "storage": "128GB SSD",
+        "price": 299.99,
+        "rating": 3.2,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 6,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC4",
+        "name": "Budget Friendly PC",
+        "processor": "Intel Pentium",
+        "graphics_card": "Integrated Graphics",
+        "ram": "4GB DDR4",
+        "storage": "256GB HDD",
+        "price": 349.99,
+        "rating": 3.5,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 7,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC2",
+        "name": "Performance PC",
+        "processor": "AMD Ryzen 5",
+        "graphics_card": "NVIDIA GeForce GTX 1660 Ti",
+        "ram": "8GB DDR4",
+        "storage": "512GB SSD",
+        "price": 1099.99,
+        "rating": 4.2,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 8,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC2",
+        "name": "Ultra Gaming PC",
+        "processor": "AMD Ryzen 9",
+        "graphics_card": "NVIDIA GeForce RTX 3090",
+        "ram": "64GB DDR4",
+        "storage": "2TB NVMe SSD",
+        "price": 2999.99,
+        "rating": 4.9,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 9,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC5",
+        "name": "Budget Gaming PC",
+        "processor": "AMD Athlon",
+        "graphics_card": "AMD Radeon RX 560",
+        "ram": "8GB DDR4",
+        "storage": "1TB HDD",
+        "price": 499.99,
+        "rating": 3.7,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 10,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC3",
+        "name": "Gaming and Streaming PC",
+        "processor": "Intel Core i5",
+        "graphics_card": "NVIDIA GeForce RTX 2060",
+        "ram": "16GB DDR4",
+        "storage": "1TB NVMe SSD",
+        "price": 1499.99,
+        "rating": 4.4,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 11,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC3",
+        "name": "Extreme Gaming PC",
+        "processor": "Intel Core i9",
+        "graphics_card": "NVIDIA GeForce RTX 3080",
+        "ram": "32GB DDR4",
+        "storage": "2TB HDD + 1TB SSD",
+        "price": 3999.99,
+        "rating": 4.8,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 1,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC1",
+        "name": "Low End PC 1",
+        "processor": "Intel i3",
+        "graphics_card": "NVIDIA GeForce GTX 1650",
+        "ram": "8GB DDR4",
+        "storage": "256GB SSD",
+        "price": 599.99,
+        "rating": 4.5,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 2,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC2",
+        "name": "Low End PC 2",
+        "processor": "AMD Ryzen 3",
+        "graphics_card": "AMD Radeon RX 550",
+        "ram": "4GB DDR4",
+        "storage": "1TB HDD",
+        "price": 449.99,
+        "rating": 3.8,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 5,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC1",
+        "name": "Gaming Beast",
+        "processor": "Intel Core i9",
+        "graphics_card": "NVIDIA GeForce RTX 3080",
+        "ram": "32GB DDR4",
+        "storage": "1TB NVMe SSD",
+        "price": 1999.99,
+        "rating": 4.8,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 4,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC1",
+        "name": "Mid-Range PC",
+        "processor": "Intel Core i5",
+        "graphics_card": "NVIDIA GeForce GTX 1660",
+        "ram": "16GB DDR4",
+        "storage": "512GB SSD",
+        "price": 899.99,
+        "rating": 4.0,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 3,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC3",
+        "name": "Budget PC",
+        "processor": "AMD Athlon",
+        "graphics_card": "Integrated Graphics",
+        "ram": "4GB DDR4",
+        "storage": "128GB SSD",
+        "price": 299.99,
+        "rating": 3.2,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 6,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC4",
+        "name": "Budget Friendly PC",
+        "processor": "Intel Pentium",
+        "graphics_card": "Integrated Graphics",
+        "ram": "4GB DDR4",
+        "storage": "256GB HDD",
+        "price": 349.99,
+        "rating": 3.5,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 7,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC2",
+        "name": "Performance PC",
+        "processor": "AMD Ryzen 5",
+        "graphics_card": "NVIDIA GeForce GTX 1660 Ti",
+        "ram": "8GB DDR4",
+        "storage": "512GB SSD",
+        "price": 1099.99,
+        "rating": 4.2,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 8,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC2",
+        "name": "Ultra Gaming PC",
+        "processor": "AMD Ryzen 9",
+        "graphics_card": "NVIDIA GeForce RTX 3090",
+        "ram": "64GB DDR4",
+        "storage": "2TB NVMe SSD",
+        "price": 2999.99,
+        "rating": 4.9,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 9,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC5",
+        "name": "Budget Gaming PC",
+        "processor": "AMD Athlon",
+        "graphics_card": "AMD Radeon RX 560",
+        "ram": "8GB DDR4",
+        "storage": "1TB HDD",
+        "price": 499.99,
+        "rating": 3.7,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 10,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC3",
+        "name": "Gaming and Streaming PC",
+        "processor": "Intel Core i5",
+        "graphics_card": "NVIDIA GeForce RTX 2060",
+        "ram": "16GB DDR4",
+        "storage": "1TB NVMe SSD",
+        "price": 1499.99,
+        "rating": 4.4,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 11,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC3",
+        "name": "Extreme Gaming PC",
+        "processor": "Intel Core i9",
+        "graphics_card": "NVIDIA GeForce RTX 3080",
+        "ram": "32GB DDR4",
+        "storage": "2TB HDD + 1TB SSD",
+        "price": 3999.99,
+        "rating": 4.8,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 12,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC6",
+        "name": "Budget Office PC",
+        "processor": "Intel Pentium",
+        "graphics_card": "Integrated Graphics",
+        "ram": "4GB DDR4",
+        "storage": "256GB SSD",
+        "price": 349.99,
+        "rating": 3.5,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 13,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC4",
+        "name": "Gaming and Multimedia PC",
+        "processor": "AMD Ryzen 5",
+        "graphics_card": "NVIDIA GeForce GTX 1660",
+        "ram": "16GB DDR4",
+        "storage": "512GB NVMe SSD",
+        "price": 999.99,
+        "rating": 4.2,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 14,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC4",
+        "name": "Workstation PC",
+        "processor": "Intel Xeon",
+        "graphics_card": "NVIDIA Quadro RTX 4000",
+        "ram": "64GB DDR4 ECC",
+        "storage": "1TB NVMe SSD + 4TB HDD",
+        "price": 4999.99,
+        "rating": 4.9,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 15,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC7",
+        "name": "Budget Home PC",
+        "processor": "Intel Celeron",
+        "graphics_card": "Integrated Graphics",
+        "ram": "4GB DDR4",
+        "storage": "128GB SSD",
+        "price": 299.99,
+        "rating": 3.2,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 16,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC5",
+        "name": "Gaming PC Plus",
+        "processor": "AMD Ryzen 7",
+        "graphics_card": "NVIDIA GeForce GTX 1660 Ti",
+        "ram": "16GB DDR4",
+        "storage": "1TB HDD + 256GB SSD",
+        "price": 1299.99,
+        "rating": 4.5,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 17,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC5",
+        "name": "Professional Workstation",
+        "processor": "Intel Core i9",
+        "graphics_card": "NVIDIA Quadro RTX 5000",
+        "ram": "32GB DDR4",
+        "storage": "2TB NVMe SSD",
+        "price": 3499.99,
+        "rating": 4.8,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 18,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC8",
+        "name": "Basic Office PC",
+        "processor": "Intel Pentium",
+        "graphics_card": "Integrated Graphics",
+        "ram": "8GB DDR4",
+        "storage": "256GB SSD",
+        "price": 399.99,
+        "rating": 3.5,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 19,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC6",
+        "name": "Gaming PC Pro",
+        "processor": "Intel Core i7",
+        "graphics_card": "NVIDIA GeForce RTX 2060",
+        "ram": "16GB DDR4",
+        "storage": "512GB NVMe SSD",
+        "price": 1699.99,
+        "rating": 4.7,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 20,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC6",
+        "name": "Extreme Gaming PC",
+        "processor": "AMD Ryzen 9",
+        "graphics_card": "NVIDIA GeForce RTX 3080",
+        "ram": "32GB DDR4",
+        "storage": "1TB NVMe SSD + 2TB HDD",
+        "price": 4299.99,
+        "rating": 4.9,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 21,
+      "fields": {
+        "category": 1,
+        "sku": "LEPC9",
+        "name": "Budget Home PC",
+        "processor": "AMD Athlon",
+        "graphics_card": "Integrated Graphics",
+        "ram": "4GB DDR4",
+        "storage": "500GB HDD",
+        "price": 299.99,
+        "rating": 3.2,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 22,
+      "fields": {
+        "category": 2,
+        "sku": "MEPC7",
+        "name": "Workstation Pro",
+        "processor": "Intel Xeon",
+        "graphics_card": "NVIDIA Quadro RTX 4000",
+        "ram": "32GB ECC DDR4",
+        "storage": "1TB NVMe SSD",
+        "price": 2499.99,
+        "rating": 4.6,
+        "image": null,
+        "image_url": null
+      }
+    },
+    {
+      "model": "products.prebuiltpc",
+      "pk": 23,
+      "fields": {
+        "category": 3,
+        "sku": "HEPC7",
+        "name": "Ultimate Gaming Beast",
+        "processor": "Intel Core i9",
+        "graphics_card": "NVIDIA GeForce RTX 3090",
+        "ram": "64GB DDR4",
+        "storage": "2TB NVMe SSD + 4TB HDD",
+        "price": 5999.99,
+        "rating": 5.0,
+        "image": null,
+        "image_url": null
+      }
+    } 
   ]
   

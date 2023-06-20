@@ -3,21 +3,33 @@
 
 {% block content %}
 
+<div class="container align-items-center text-center py-3">
+  <h2 class="section-heading">Products</h2>
+  <hr class="products-line-break">
+</div>
+
 <section class="py-3">
   <div class="container">
     <div class="row">
       {% for product in products %}
       <div class="col-md-6 py-4">
         <div class="card card-home h-100">
+          {% if product.image %}
           <a href="{% url 'products_details' product.id %}">
           <img class="card-img-index card-image mx-auto d-block" src="{{ product.image.url }}" alt="{{ product.name }}">
           </a>
+          {% else %}
+          <a href="{% url 'products_details' product.id %}">
+          <img class="card-img-index card-image mx-auto d-block" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
+          </a>
+          {% endif %}
           <div class="card-body text-center">
             <h3 class="card-title fw-bold text-center text-uppercase">{{ product.name }}</h3>
-            <p class="card-text">Processor: {{ product.processor }}</p>
-            <p class="card-text">Graphics Card: {{ product.graphics_card }}</p>
-            <p class="card-text">RAM: {{ product.ram }}</p>
-            <p class="card-text">Storage: {{ product.storage }}</p>
+            <hr>
+            <p class="card-text fw-bold"><strong>CPU: </strong>{{ product.processor }}</p>
+            <p class="card-text fw-bold"><strong>GPU: </strong>{{ product.graphics_card }}</p>
+            <p class="card-text fw-bold"><strong>RAM: </strong>{{ product.ram }}</p>
+            <p class="card-text fw-bold"><strong>HDD/SSD: </strong>{{ product.storage }}</p>
           </div>
           <div class="card-footer bg-white pt-0 border-0 text-right">
             <div class="row">
