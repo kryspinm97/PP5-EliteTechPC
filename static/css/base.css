@@ -44,7 +44,7 @@ hr {
 
 .card-img-index {
     height: 250px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .card-home {
@@ -151,6 +151,10 @@ hr {
     color: #007bff;
 }
 
+.card-body {
+    padding: 0;
+}
+
 
 /*---- NAVBAR ----*/
 
@@ -172,6 +176,10 @@ hr {
 
 .btn-warning {
     font-weight: 600;
+}
+
+.footer {
+    margin-top: auto !important;
 }
 
 /*--- FOOTER ---*/
