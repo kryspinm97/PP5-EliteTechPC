@@ -4,7 +4,8 @@
 {% block content %}
 
 <div class="container ">
-    <h2 class="logo-font bagging-area mb-4">Shopping Bag</h2>
+    <h2 class="logo-font bagging-area text-center mb-4">Shopping Bag</h2>
+    <hr>
 
     {% if bag_items %}
     {% for item in bag_items %}
@@ -22,7 +23,15 @@
             <div class="col-md-3">
                 <div class="card-body text-center">
                     <h6 class="card-title">Price: ${{ item.product.price }}</h6>
-                    <h6 class="card-title">Qty: {{ item.quantity }}</h6>
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" value="{{ item.quantity }}" name="quantity">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </div>
+                    </form>
                     <h6 class="card-title">Subtotal: ${{ item.subtotal }}</h6>
                 </div>
             </div>
@@ -45,6 +54,7 @@
             Secure Checkout <i class="fas fa-lock"></i>
         </a>
     </div>
+    <hr>
 
     {% else %}
     <div class="text-center mt-5">
@@ -55,6 +65,7 @@
     </div>
     {% endif %}
 </div>
+
 
 
 {% endblock %}
