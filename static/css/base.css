@@ -44,7 +44,7 @@ hr {
 
 .card-img-index {
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .card-home {
@@ -149,10 +149,6 @@ hr {
 .navbar-brand-pc {
     font-weight: 800;
     color: #007bff;
-}
-
-.card-body {
-    padding: 0;
 }
 
 
