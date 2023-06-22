@@ -26,10 +26,21 @@
                     <form method="post" action="">
                         {% csrf_token %}
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" value="{{ item.quantity }}" name="quantity">
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-primary">Update</button>
-                            </div>
+                            <span class="input-group-btn mr-2">
+                                <button type="button" class="quantity-left-minus btn btn-danger btn-number" id="decrement-qty_{{item.product.id}}" data-type="minus" data-field="">
+                                    <span class="glyphicon glyphicon-minus">-</span>
+                            </button>
+                            </span>
+                            <input type="text" id="id_qty_{{item.product.id}}" name="quantity" class="form-control input-number qty_input" value="{{ item.quantity }}" min="1" max="99">
+                            <span class="input-group-btn ml-2">
+                                <button type="button" class="quantity-right-plus btn btn-success btn-number" id="increment-qty_{{item.product.id}}" data-type="plus" data-field="">
+                                    <span class="glyphicon glyphicon-plus">+</span>
+                                </button>
+                                <form method="post" action="" class="ml-2">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-warning">X</button>
+                                </form>
+                            </span>
                         </div>
                     </form>
                     <h6 class="card-title">Subtotal: ${{ item.subtotal }}</h6>

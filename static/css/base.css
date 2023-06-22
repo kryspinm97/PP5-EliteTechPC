@@ -55,14 +55,6 @@ hr {
     font-weight: 800;
 }
 
-.card button {
-    text-transform: uppercase;
-    color: #ffffff;
-    background-color: #007bff;
-    border-style: none;
-    font-size: 1rem;
-}
-
 /*-- CARDS --*/
 
 
@@ -193,5 +185,6 @@ hr {
 .btt-link {
     cursor: pointer;
 }
+
 
 /*--- FOOTER ---*/
