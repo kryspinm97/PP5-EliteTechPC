@@ -40,6 +40,8 @@
                         </div>
                     </form>
                     <h6 class="card-title">Subtotal: ${{ item.subtotal }}</h6>
+                    <a class="update-link text-info"><small>Update</small></a>
+                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                 </div>
             </div>
         </div>
@@ -88,9 +90,8 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+        var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
          .done(function() {
