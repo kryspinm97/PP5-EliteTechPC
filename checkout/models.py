@@ -17,7 +17,8 @@ class Order(models.Model):
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     address_line1 = models.CharField(max_length=80, null=False, blank=False)
     address_line2 = models.CharField(max_length=80, null=False, blank=False)
-    county_or_state = models.CharField(max_length=80, null=False, blank=False)
+    country = models.CharField(max_length=40, null=False, blank=False, default='Ireland')
+    county = models.CharField(max_length=80, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0)
