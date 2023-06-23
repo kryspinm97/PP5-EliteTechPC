@@ -120,13 +120,14 @@ body {
     margin-top :50px;
 }
 
+
 /**** BASE HOME PAGE ****/
 
 
 /*---- NAVBAR ----*/
 
 .navbar-right {
-    color: #343A40;
+    color: black;
 }
 
 .logo-font {

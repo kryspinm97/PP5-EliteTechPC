@@ -40,7 +40,7 @@ def products_prebuiltpc(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-    
+
     # Pagination
     paginator = Paginator(products, 6)  # Display 6 products per page
     page_number = request.GET.get('page')
