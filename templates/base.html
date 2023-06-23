@@ -50,7 +50,7 @@
 
   <!-- NAV BAR SECTION -->
 
-  <header class="container-fluid fixed-top">
+  <header class="container-fluid sticky-top">
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -60,7 +60,7 @@
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <form method="GET" action="{% url 'products' %}">
           <div class="input-group w-100">
-            <input class="form-control border border-black type=" text="text" name="q" placeholder="Search our site">
+            <input class="form-control border rounded-0 border-black type=" text="text" name="q" placeholder="Search our site">
             <div class="input-group-append">
               <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                 <span class="icon">
@@ -137,7 +137,7 @@
 
   <!-- FOOTER SECTION -->
 
-  <footer class="text-center text-lg-start">
+  <footer class="footer text-center text-lg-start">
     <section class="py-4">
       <div class="footer-headers fa-footer-icons container text-center text-md-start mt-5">
         <div class="row mt-3">

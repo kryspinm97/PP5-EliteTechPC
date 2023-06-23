@@ -5,7 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 50px;
+    background-color: #f5f5f5;
 }
 
 /****** General CSS *****/
@@ -42,12 +42,16 @@ body {
     object-fit: contain;
 }
 
-.card-home {
-    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.3);
-}
-
 .card-title {
     font-weight: 800;
+}
+
+.card-home {
+    transition: .2s;
+}
+
+.card-home:hover {
+    transform: scale(1.02);
 }
 
 /*-- CARDS --*/
@@ -154,6 +158,10 @@ body {
 
 .fa-star {
     color: #FFC107;
+}
+
+.fa-search {
+    color :#FFC107;
 }
 
 .footer-headers h6 {

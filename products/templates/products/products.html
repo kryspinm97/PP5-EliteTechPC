@@ -3,18 +3,25 @@
 
 {% block content %}
 
-<div class="container align-items-center text-center py-3">
-  <h2 class="section-heading">Products</h2>
+<div class="container align-items-center text-center py-1">
+  {% if current_categories %}
+    {% for category in current_categories %}
+      <h2 class="section-heading">{{ category.friendly_name }}</h2>
+    {% endfor %}
+  {% else %}
+    <h2 class="section-heading">Products</h2>
+  {% endif %}
   <hr class="products-line-break">
 </div>
+
 
 <section class="py-3">
   <div class="container">
       <div class="product-container col-12">
       <div class="row mt-1 mb-2">
           <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-              <div class="sort-select-wrapper w-50">
-                  <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+              <div class="sort-select-wrapperw-50">
+                  <select id="sort-selector" class="custom-select rounded-0 custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                       <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                       <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                       <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -39,7 +46,7 @@
     <div class="row">
       {% for product in products %}
       <div class="col-md-4 py-4">
-        <div class="card card-home h-100">
+        <div class="card card-home h-100 rounded-0">
           {% if product.image %}
           <a href="{% url 'products_details' product.id %}">
             <img class="w-100 h-auto" src="{{ product.image.url }}"
@@ -52,7 +59,7 @@
           </a>
           {% endif %}
           <div class="card-body text-center">
-            <h4 class="card-title fw-bold text-center text-uppercase">{{ product.name }}</h4>
+            <h5 class="card-title fw-bold text-center text-uppercase">{{ product.name }}</h5>
             {% if product.category %}
             <p class="small mt-1 mb-0">
               <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -60,11 +67,6 @@
               </a>
             </p>
             {% endif %}
-            <hr>
-            <p class="card-text fw-bold"><strong>CPU: </strong>{{ product.processor }}</p>
-            <p class="card-text fw-bold"><strong>GPU: </strong>{{ product.graphics_card }}</p>
-            <p class="card-text fw-bold"><strong>RAM: </strong>{{ product.ram }}</p>
-            <p class="card-text fw-bold"><strong>HDD/SSD: </strong>{{ product.storage }}</p>
           </div>
           <div class="card-footer bg-white pt-0 border-0 text-right">
             <div class="row">
