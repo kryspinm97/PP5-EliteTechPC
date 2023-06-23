@@ -145,6 +145,11 @@ body {
     color: #007bff;
 }
 
+.fa-user,
+.fa-cart-shopping {
+    color:#007bff;
+}
+
 
 /*---- NAVBAR ----*/
 
@@ -161,7 +166,7 @@ body {
 }
 
 .fa-search {
-    color :#FFC107;
+    color :#007bff;
 }
 
 .footer-headers h6 {
@@ -206,6 +211,10 @@ body {
 
 .toast-capper {
     height:2px;
+}
+
+.border-info {
+    border-color:#007bff !important;
 }
 
 

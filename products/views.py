@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.core.paginator import Paginator
 from .models import PrebuiltPC, Category
 from django.contrib import messages
 from django.db.models import Q
@@ -39,11 +40,16 @@ def products_prebuiltpc(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
+    
+    # Pagination
+    paginator = Paginator(products, 6)  # Display 6 products per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'products': products,
+        'page_obj': page_obj,
         'search_term': query,
         'current_categories': categories if category_values else None,
         'current_sorting': current_sorting,
