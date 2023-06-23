@@ -21,3 +21,31 @@ def add_to_bag(request, item_id):
 
     request.session['bag'] = bag
     return redirect(redirect_url)
+
+
+def adjust_bag(request, item_id):
+    """ Adjust quantity of desired products in the cart """
+
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    if quantity > 0:
+        bag[item_id] = quantity
+    else:
+        bag.pop(item_id)
+    
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
+
+
+def remove_from_bag(request, item_id):
+    """ Remove an item from the shopping bag """
+    
+    bag = request.session.get('bag', {})
+    
+    if item_id in bag:
+        del bag[item_id]
+        request.session['bag'] = bag
+        return HttpResponse(status=204)  # Return HTTP status 204 (No Content) for successful removal
+    
+    return HttpResponse(status=400)  # Return HTTP status 400 (Bad Request) if item not found in bag

@@ -23,17 +23,17 @@
             <div class="col-md-3">
                 <div class="card-body text-center">
                     <h6 class="card-title">Price: ${{ item.product.price }}</h6>
-                    <form method="post" action="">
+                    <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                         {% csrf_token %}
                         <div class="input-group mb-3">
                             <span class="input-group-btn mr-2">
-                                <button type="button" class="decrement-qty btn btn-danger btn-number" data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}" data-type="minus" data-field="">
+                                <button type="button" class="decrement-qty btn btn-danger btn-number" data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}" data-type="minus">
                                     <span class="glyphicon glyphicon-minus">-</span>
                             </button>
                             </span>
                             <input type="text" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" name="quantity" class="form-control input-number qty_input" value="{{ item.quantity }}" min="1" max="99">
                             <span class="input-group-btn ml-2">
-                                <button type="button" class="increment-qty btn btn-success btn-number" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}" data-type="plus" data-field="">
+                                <button type="button" class="increment-qty btn btn-success btn-number" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}" data-type="plus">
                                     <span class="glyphicon glyphicon-plus">+</span>
                                 </button>
                             </span>
@@ -82,12 +82,14 @@
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
+        e.preventDefault();
+        var form = $(this).closest('.card-body').find('.update-form');
         form.submit();
-    })
+    });
 
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
+        e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/bag/remove/${itemId}/`;
@@ -97,7 +99,8 @@
          .done(function() {
              location.reload();
          });
-    })
+    });
 </script>
+
 
 {% endblock %}
