@@ -16,11 +16,18 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title text-center">Order Details</h5>
+                        <hr>
+                        <div>
+                            <p class="text-center">Your order confirmation will be sent to: {{order.email}}</p=>
+                        </div>
+                        <hr>
                         <div class="order-details">
                             <p><strong>Order Number:</strong> {{ order.order_number }}</p>
                             <p><strong>Date:</strong> {{ order.date }}</p>
                         </div>
+                        <hr>
                         <h5 class="card-title text-center mt-4">Billing Information</h5>
+                        <hr>
                         <div class="billing-info">
                             <p><strong>Full Name:</strong> {{ order.full_name }}</p>
                             <p><strong>Email:</strong> {{ order.email }}</p>
@@ -30,6 +37,7 @@
                             <p><strong>Postal Code:</strong> {{ order.post_code }}</p>
                             <p><strong>Country:</strong> {{ order.country }}</p>
                         </div>
+                        <hr>
                         <h5 class="card-title text-center mt-4">Order Items</h5>
                         <div class="order-items">
                             <table class="table table-striped">
