@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6ube-(^yt0+!%wwv51h8!_pme_!p*f5t4bew(6r2u(!gjq+yi_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-kryspinm97-pp5elitetech-rdhv4iv1cji.ws-eu100.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '8000-kryspinm97-pp5elitetech-rdhv4iv1cji.ws-eu100.gitpod.io']
 
 
 # Application definition
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
 
-    # Other Apps 
+    # Other Apps
     'crispy_forms',
 ]
 
