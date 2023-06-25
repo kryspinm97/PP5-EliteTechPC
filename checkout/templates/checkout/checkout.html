@@ -8,16 +8,15 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
-        <div class="py-5 text-center">
+        <div class="py-3 text-center">
             <h2>Checkout</h2>
             <hr>
         </div>
-        
         <div class="row">       
-            <div class="col-12 col-lg-6 border-right">
+            <div class="col-12 col-lg-6 border-right rounded-0">
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class="rounded-0 px-3 mb-5">
                         <legend class="fieldset-label text-black w-auto">Details</legend>
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -37,7 +36,7 @@
                             <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
                         </div>
                     </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class="rounded-0 px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -151,4 +150,11 @@
         </div>
         <hr>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
