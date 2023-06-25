@@ -12,11 +12,11 @@ class OrderForm(forms.ModelForm):
         fields = (
             'full_name',
             'email',
-            'phone_number',
             'address_line1',
             'address_line2',
             'town_or_city',
             'post_code',
+            'phone_number',
             'country',
             'county',
         )
