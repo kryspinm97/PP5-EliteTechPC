@@ -22,7 +22,7 @@
             </div>
             <div class="col-md-3">
                 <div class="card-body text-center">
-                    <h6 class="card-title">Price: ${{ item.product.price }}</h6>
+                    <h6 class="card-title">Price: €{{ item.product.price }}</h6>
                     <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                         {% csrf_token %}
                         <div class="input-group mb-3">
@@ -39,7 +39,7 @@
                             </span>
                         </div>
                     </form>
-                    <h6 class="card-title">Subtotal: ${{ item.subtotal }}</h6>
+                    <h6 class="card-title">Subtotal: €{{ item.subtotal }}</h6>
                     <div class="d-flex justify-content-center align-items-center mt-2">
                         <a class="btn-sm update-link btn-light mr-2"><small>Update</small></a>
                         <a class="btn-sm remove-item btn-danger" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
@@ -49,14 +49,15 @@
         </div>
     </div>
     {% endfor %}
+    <hr>
 
     <div class="text-right">
-        <h5><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h5>
-        <h5>Delivery: ${{ delivery|floatformat:2 }}</h5>
-        <h3 class="mt-3"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h3>
+        <h5><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h5>
+        <h5>Delivery: €{{ delivery|floatformat:2 }}</h5>
+        <h3 class="mt-3"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h3>
         {% if free_delivery_delta > 0 %}
         <p class="mb-3 text-danger">You could get free delivery by spending just
-        <strong>${{ free_delivery_delta }}</strong> more!</p>
+        <strong>€{{ free_delivery_delta }}</strong> more!</p>
         {% endif %}
         <a href="{% url 'products' %}" class="btn btn-outline-secondary rounded-0"><i class="fas fa-chevron-left"></i> Keep Shopping</a>
         <a href="{% url 'checkout' %}" class="btn btn-primary rounded-0 ml-2">Secure Checkout <i class="fas fa-lock"></i></a>
@@ -83,21 +84,21 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function(e) {
+    €('.update-link').click(function(e) {
         e.preventDefault();
-        var form = $(this).closest('.card-body').find('.update-form');
+        var form = €(this).closest('.card-body').find('.update-form');
         form.submit();
     });
 
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    €('.remove-item').click(function(e) {
         e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
+        var itemId = €(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/€{itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
-        $.post(url, data)
+        €.post(url, data)
          .done(function() {
              location.reload();
          });
