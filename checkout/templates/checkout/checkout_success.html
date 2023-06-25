@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout_success.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="py-3 text-center">
+            <h2 class="display-4">Thank you for your order!</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Order Confirmation</h5>
+                        <p class="card-text">Your order has been successfully processed.</p>
+                        <div class="order-details">
+                            <p><strong>Order Number:</strong> {{ order.order_number }}</p>
+                            <p><strong>Email:</strong> {{ order.email }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -45,17 +45,10 @@
                     {% csrf_token %}
                     <fieldset class="rounded-0 px-3 mb-5">
                         <legend class="fieldset-label text-black w-auto">Details</legend>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="firstName">First name</label>
-                                <input type="text" class="form-control rounded-0" id="firstName" name="first_name" placeholder="" value="" required>
-                                <div class="invalid-feedback">Valid first name is required.</div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="lastName">Last name</label>
-                                <input type="text" class="form-control rounded-0" id="lastName" name="last_name" placeholder="" value="" required>
-                                <div class="invalid-feedback">Valid last name is required.</div>
-                            </div>
+                        <div class="mb-3">
+                            <label for="fullName">Full name</label>
+                            <input type="text" class="form-control rounded-0" id="full_Name" name="full_name" placeholder="" value="" required>
+                            <div class="invalid-feedback">Valid full name is required.</div>
                         </div>
                         <div class="mb-3">
                             <label for="email">Email</label>
@@ -63,6 +56,7 @@
                             <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
                         </div>
                     </fieldset>
+                    
                     <fieldset class="rounded-0 px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                         <div class="row">
@@ -84,9 +78,9 @@
                                 <div class="invalid-feedback">Postal code is required.</div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="city">City</label>
+                                <label for="city">Town or City</label>
                                 <input type="text" class="form-control rounded-0" id="city" name="town_or_city" placeholder="" required>
-                                <div class="invalid-feedback">City is required.</div>
+                                <div class="invalid-feedback">Town or City is required.</div>
                             </div>
                         </div>
                         <div class="mb-3">

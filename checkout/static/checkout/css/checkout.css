@@ -40,3 +40,49 @@
     color: #000;
     border: 1px solid #000;
 }
+
+.container {
+  margin-top: 50px;
+}
+
+.py-3.text-center {
+  margin-bottom: 30px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #777;
+}
+
+.order-details {
+  margin-top: 20px;
+}
+
+.order-details p {
+  margin-bottom: 5px;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.shadow {
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767.98px) {
+  .card {
+    margin-bottom: 30px;
+  }
+}

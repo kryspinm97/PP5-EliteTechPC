@@ -84,21 +84,21 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    €('.update-link').click(function(e) {
+    $('.update-link').click(function(e) {
         e.preventDefault();
-        var form = €(this).closest('.card-body').find('.update-form');
+        var form = $(this).closest('.card-body').find('.update-form');
         form.submit();
     });
 
     // Remove item and reload on click
-    €('.remove-item').click(function(e) {
+    $('.remove-item').click(function(e) {
         e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
-        var itemId = €(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/€{itemId}/`;
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
-        €.post(url, data)
+        $.post(url, data)
          .done(function() {
              location.reload();
          });
