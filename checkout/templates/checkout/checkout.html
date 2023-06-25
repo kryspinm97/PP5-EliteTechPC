@@ -59,7 +59,7 @@
         <strong>${{ free_delivery_delta }}</strong> more!</p>
         {% endif %}
         <a href="{% url 'products' %}" class="btn btn-outline-secondary rounded-0"><i class="fas fa-chevron-left"></i> Keep Shopping</a>
-        <a href="{% url 'checkout' %}" class="btn btn-primary rounded-0 ml-2">Secure Checkout <i class="fas fa-lock"></i></a>
+        <a href="" class="btn btn-primary rounded-0 ml-2">Secure Checkout <i class="fas fa-lock"></i></a>
     </div>
     <hr>
 
@@ -80,29 +80,6 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-
-<script type="text/javascript">
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        e.preventDefault();
-        var form = $(this).closest('.card-body').find('.update-form');
-        form.submit();
-    });
-
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        e.preventDefault();
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
-
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    });
-</script>
 
 
 {% endblock %}
