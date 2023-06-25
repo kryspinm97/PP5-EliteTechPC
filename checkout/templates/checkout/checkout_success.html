@@ -2,23 +2,62 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout_success.css' %}">
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="py-3 text-center">
-            <h2 class="display-4">Thank you for your order!</h2>
+            <h2>Thank you for your order!</h2>
+            <hr>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
                 <div class="card shadow">
                     <div class="card-body">
-                        <h5 class="card-title">Order Confirmation</h5>
-                        <p class="card-text">Your order has been successfully processed.</p>
+                        <h5 class="card-title text-center">Order Details</h5>
                         <div class="order-details">
                             <p><strong>Order Number:</strong> {{ order.order_number }}</p>
+                            <p><strong>Date:</strong> {{ order.date }}</p>
+                        </div>
+                        <h5 class="card-title text-center mt-4">Billing Information</h5>
+                        <div class="billing-info">
+                            <p><strong>Full Name:</strong> {{ order.full_name }}</p>
                             <p><strong>Email:</strong> {{ order.email }}</p>
+                            <p><strong>Phone Number:</strong> {{ order.phone_number }}</p>
+                            <p><strong>Address:</strong> {{ order.address_line1 }}</p>
+                            <p><strong>City:</strong> {{ order.town_or_city }}</p>
+                            <p><strong>Postal Code:</strong> {{ order.post_code }}</p>
+                            <p><strong>Country:</strong> {{ order.country }}</p>
+                        </div>
+                        <h5 class="card-title text-center mt-4">Order Items</h5>
+                        <div class="order-items">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for line_item in order.lineitems.all %}
+                                        <tr>
+                                            <td>
+                                                <img src="{{ line_item.product.image.url }}" alt="{{ line_item.product.name }}" class="order-item-image">
+                                            </td>
+                                            <td>{{ line_item.product.name }}</td>
+                                            <td>€{{ line_item.product.price }}</td>
+                                            <td>{{ line_item.quantity }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h5 class="small mt-4 text-left"><strong>Delivery Charges:</strong> €{{ order.delivery_cost }}</h5>
+                            <h5 class="small mt-4 text-left"><strong>Order Grand Total:</strong> €{{ order.grand_total }}</h5>
                         </div>
                     </div>
                 </div>
@@ -26,4 +65,3 @@
         </div>
     </div>
 {% endblock %}
-
