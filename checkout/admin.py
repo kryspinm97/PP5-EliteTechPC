@@ -17,7 +17,7 @@ class OrderAdmin(admin.ModelAdmin):
                        'grand_total', 'original_bag', 
                        'stripe_pid')
 
-    fields = ('order_number', 'date', 'full_name',
+    fields = ('order_number', 'user_profile', 'date', 'full_name',
               'email', 'phone_number', 'country',
               'post_code', 'town_or_city', 'address_line1',
               'address_line2', 'county', 'delivery_cost',
