@@ -20,6 +20,10 @@ class OrderForm(forms.ModelForm):
             'country',
             'county',
         )
+        widgets = {
+            'country': forms.Select(attrs={'class': 'form-control rounded-0'}),
+            
+        }
 
     def __init__(self, *args, **kwargs):
         """
@@ -37,7 +41,7 @@ class OrderForm(forms.ModelForm):
             'town_or_city': 'Town or City',
             'address_line1': 'Address Line 1',
             'address_line2': 'Address Line 2',
-            'county': 'County',
+            'county': 'County or State',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
@@ -49,5 +53,5 @@ class OrderForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-                self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-                self.fields[field].label = False
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].label = False

@@ -46,12 +46,10 @@
                     <fieldset class="rounded-0 px-3 mb-5">
                         <legend class="fieldset-label text-black w-auto">Details</legend>
                         <div class="mb-3">
-                            <label for="fullName">Full name</label>
                             <input type="text" class="form-control rounded-0" id="full_Name" name="full_name" placeholder="Full Name" value="" required>
                             <div class="invalid-feedback">Valid full name is required.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="email">Email</label>
                             <input type="email" class="form-control rounded-0" id="email" name="email" placeholder="Email">
                             <div class="invalid-feedback">Please enter a valid email address for shipping updates.</div>
                         </div>
@@ -61,39 +59,32 @@
                         <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="phone">Phone number</label>
                                 <input type="tel" class="form-control rounded-0" id="phone" name="phone_number" placeholder="Phone Number" required>
                                 <div class="invalid-feedback">Phone number is required.</div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="country">Country</label>
-                                <input type="text" class="form-control rounded-0" id="country" name="country" placeholder="Country" required>
+                                {{ order_form.country | as_crispy_field }}
                                 <div class="invalid-feedback">Country is required.</div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="postcode">Postal code</label>
                                 <input type="text" class="form-control rounded-0" id="postcode" name="post_code" placeholder="Post Code" required>
                                 <div class="invalid-feedback">Postal code is required.</div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="city">Town or City</label>
                                 <input type="text" class="form-control rounded-0" id="city" name="town_or_city" placeholder="Town or City" required>
                                 <div class="invalid-feedback">Town or City is required.</div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="address1">Address Line 1</label>
                             <input type="text" class="form-control rounded-0" id="address1" name="address_line1" placeholder="Address Line 1" required>
                             <div class="invalid-feedback">Address is required.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="address2">Address Line 2</label>
                             <input type="text" class="form-control rounded-0" id="address2" name="address_line2" placeholder="Address Line 2">
                         </div>
                         <div class="mb-3">
-                            <label for="county">County</label>
                             <input type="text" class="form-control rounded-0" id="county" name="county" placeholder="County" required>
                             <div class="invalid-feedback">County is required.</div>
                         </div>
