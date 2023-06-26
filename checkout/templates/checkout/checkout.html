@@ -58,11 +58,11 @@
                     <fieldset class="rounded-0 px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                         <div class="row">
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-6">
                                 <input type="tel" class="form-control rounded-0" id="phone" name="phone_number" placeholder="Phone Number" required>
                                 <div class="invalid-feedback">Phone number is required.</div>
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-6">
                                 {{ order_form.country | as_crispy_field }}
                                 <div class="invalid-feedback">Country is required.</div>
                             </div>
