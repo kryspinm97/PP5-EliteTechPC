@@ -12,7 +12,11 @@
     <div class="card mb-3">
         <div class="row no-gutters">
             <div class="col-md-2">
-                <img src="{{ item.product.image.url }}" class="card-img" alt="{{ item.product.name }}">
+                {% if item.product.image %}
+                <img class="card-img" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                {% else %}
+                <img class="card-img" src="{{ MEDIA_URL }}noimage.webp" alt="{{ item.product.name }}">
+                {% endif %}
             </div>
             <div class="col-md-7">
                 <div class="card-body">
