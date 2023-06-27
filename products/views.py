@@ -54,6 +54,7 @@ def products_prebuiltpc(request):
         'search_term': query,
         'current_categories': categories if category_values else None,
         'current_sorting': current_sorting,
+        'current_categories_str': ','.join([cat.name for cat in categories]) if categories else '',
     }
 
     return render(request, 'products/products.html', context)
@@ -74,7 +75,17 @@ def prebuiltpc_details(request, product_id):
 
 def add_product(request):
     """ Add a product to the store """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = ProductForm()
+        
     template = 'products/add_product.html'
     context = {
         'form': form,
