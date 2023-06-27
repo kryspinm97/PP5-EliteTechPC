@@ -11,28 +11,31 @@
             <h2>Product Management</h2>
             <hr>
         </div>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            {{ form|crispy }}
-                            <button type="submit" class="btn btn-primary rounded-0">Add Product</button>
-                        </form>
+        <div class="card shadow">
+            <div class="card-body">
+                <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            {{ form.category|as_crispy_field }}
+                            {{ form.sku|as_crispy_field }}
+                            {{ form.name|as_crispy_field }}
+                            {{ form.processor|as_crispy_field }}
+                            {{ form.graphics_card|as_crispy_field }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form.ram|as_crispy_field }}
+                            {{ form.storage|as_crispy_field }}
+                            {{ form.price|as_crispy_field }}
+                            {{ form.rating|as_crispy_field }}
+                            {{ form.image_url|as_crispy_field }}
+                            {{ form.image|as_crispy_field }}
+                        </div>
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-primary rounded-0">Add Product</button>
+                </form>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center text-center">
-            <div class="col-12 col-lg-7">
-                <a href="" class="btn btn-black rounded-0 my-2">
-                    <span class="icon mr-2">
-                        <i class="fas fa-angle-left"></i>
-                    </span>
-                    <span class="btn btn-outline-dark text-uppercase">Back to Product Management</span>
-                </a>
-            </div>
-        </div>
+        <hr>
     </div>
 {% endblock %}
