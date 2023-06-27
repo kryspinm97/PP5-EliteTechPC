@@ -1,0 +1,1 @@
+EliteTechPC Confirmation for the Order Number {{ order.order_number }}
