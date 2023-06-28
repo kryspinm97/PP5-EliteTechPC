@@ -53,7 +53,13 @@
                                     {% for line_item in order.lineitems.all %}
                                         <tr>
                                             <td>
+                                                
+                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                                {% if item.product.image %}
                                                 <img src="{{ line_item.product.image.url }}" alt="{{ line_item.product.name }}" class="order-item-image">
+                                                {% else %}
+                                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                {% endif %}
                                             </td>
                                             <td>{{ line_item.product.name }}</td>
                                             <td>€{{ line_item.product.price }}</td>

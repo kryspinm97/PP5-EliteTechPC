@@ -103,7 +103,7 @@
   <ul class="pagination justify-content-center">
     <!-- If there is a previous page -->
     {% if page_obj.has_previous %}
-      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}&category={{ current_categories_str }}"><i class="fa-solid fa-angle-left"></i></a></li>
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if current_categories_str %}&category={{ current_categories_str }}{% endif %}"><i class="fa-solid fa-angle-left"></i></a></li>
     {% else %}
       <li class="page-item disabled"><a class="page-link"><i class="fa-solid fa-angle-left"></i></a></li>
     {% endif %}
@@ -114,18 +114,19 @@
       {% if page_obj.number == i %}
         <li class="page-item active"><a class="page-link">{{ i }}</a></li>
       {% else %}
-        <li class="page-item"><a class="page-link" href="?page={{ i }}&category={{ current_categories_str }}">{{ i }}</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ i }}{% if current_categories_str %}&category={{ current_categories_str }}{% endif %}">{{ i }}</a></li>
       {% endif %}
     {% endfor %}
 
     <!-- If there is a next page -->
     {% if page_obj.has_next %}
-      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}&category={{ current_categories_str }}"><i class="fa-solid fa-angle-left fa-rotate-180"></i></a></li>
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}{% if current_categories_str %}&category={{ current_categories_str }}{% endif %}"><i class="fa-solid fa-angle-left fa-rotate-180"></i></a></li>
     {% else %}
       <li class="page-item disabled"><a class="page-link"><i class="fa-solid fa-angle-left fa-rotate-180"></i></a></li>
     {% endif %}
   </ul>
 </nav>
+
 
 
 

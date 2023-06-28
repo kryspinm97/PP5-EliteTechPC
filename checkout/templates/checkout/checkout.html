@@ -23,7 +23,11 @@
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                             <div>
                                 <div class="media">
-                                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="mr-3 order-summary-img">
+                                    {% if item.product.image %}
+                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                    {% else %}
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    {% endif %}
                                     <div class="media-body">
                                         <h6 class="my-0"><strong>{{ item.product.name }}</strong></h6>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>

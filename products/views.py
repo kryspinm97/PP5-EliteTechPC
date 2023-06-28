@@ -24,8 +24,12 @@ def products_prebuiltpc(request):
         products = products.filter(queries)
 
     if category_values:
-        categories = Category.objects.filter(name__in=category_values)
-        products = products.filter(category__in=categories)
+        category_values = category_values[0].split(',') if ',' in category_values[0] else category_values
+        # Ignore empty strings
+        category_values = [value for value in category_values if value]
+        if category_values:
+            categories = Category.objects.filter(name__in=category_values)
+            products = products.filter(category__in=categories)
 
     if request.GET:
         if 'sort' in request.GET:
