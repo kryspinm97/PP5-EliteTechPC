@@ -170,6 +170,10 @@ body {
     color :#007bff;
 }
 
+.fa-product-hunt, .fa-address-book{
+    color: #007bff;
+}
+
 .footer-headers h6 {
     font-weight: 800;
 }
@@ -298,3 +302,20 @@ body {
     border-color: #dc3545;
     border-radius: 0;
 }
+
+@media (max-width: 400px) {
+    .navbar-nav .list-inline-item {
+      width: 33.33%;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .navbar-nav .shopping-cart-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+  
+  
