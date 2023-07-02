@@ -22,5 +22,26 @@
                 <a href="{% url 'products' %}?category=high-end" class="dropdown-item">High-End PC's</a>
             </div>
         </li>
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="computers-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Monitors
+            </a>
+            <div class="dropdown-menu rounded-0 border-0" aria-labelledby="computers-link">
+                <a href="{% url 'products' %}?category=low-end" class="dropdown-item">60Hz</a>
+                <a href="{% url 'products' %}?category=mid-end" class="dropdown-item">144Hz</a>
+                <a href="{% url 'products' %}?category=high-end" class="dropdown-item">240Hz</a>
+                <a href="{% url 'products' %}?category=high-end" class="dropdown-item">360Hz</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="computers-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Peripherals
+            </a>
+            <div class="dropdown-menu rounded-0 border-0" aria-labelledby="computers-link">
+                <a href="{% url 'products' %}?category=low-end" class="dropdown-item">Mice</a>
+                <a href="{% url 'products' %}?category=mid-end" class="dropdown-item">Keyboards</a>
+                <a href="{% url 'products' %}?category=high-end" class="dropdown-item">Headsets</a>
+            </div>
+        </li>
     </ul>
 </div>

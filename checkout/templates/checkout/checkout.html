@@ -8,17 +8,17 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
-        <div class="py-3 text-center">
+        <div class="py-2 text-center">
             <h2>Checkout</h2>
             <hr>
         </div>
         <div class="row">
             <div class="col-md-6 order-md-2 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-muted">Order Summary ({{ product_count }})</span>
-                    <span class="badge badge-secondary badge-pill">{{ product_count }}</span>
+                    <span>Order Summary</span>
+                    <span class="badge badge-primary badge-pill">{{ product_count }}</span>
                 </h4>
-                <ul class="rounded-0 list-group py-4 mb-3">
+                <ul class="rounded-0 list-group py-2 mb-3">
                     {% for item in bag_items %}
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                             <div>
@@ -67,8 +67,8 @@
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    <a class="text-primary" href="{% url 'account_signup' %}">Create an account</a> or 
+                                    <a class="text-primary" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
 							{% endif %}
 						</div>

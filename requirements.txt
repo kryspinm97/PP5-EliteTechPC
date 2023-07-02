@@ -9,6 +9,7 @@ django-crispy-forms==1.14.0
 django-storages==1.13.2
 gunicorn==20.1.0
 jmespath==1.0.1
+mailchimp-marketing==3.0.80
 oauthlib==3.2.2
 Pillow==9.5.0
 psycopg2==2.9.6

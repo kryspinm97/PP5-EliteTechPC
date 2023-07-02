@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     # Other Apps
     'crispy_forms',
     'django_countries',
-    'storages'
+    'storages',
+    'mailchimp_marketing',
 ]
 
 MIDDLEWARE = [
@@ -214,7 +215,7 @@ if 'USE_AWS' in os.environ:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-FREE_DELIVERY_THRESHOLD = 500
+FREE_DELIVERY_THRESHOLD = 150
 STANDARD_DELIVERY_PERCENTAGE = 9
 STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
