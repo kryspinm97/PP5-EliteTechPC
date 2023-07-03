@@ -31,18 +31,19 @@
                         {% csrf_token %}
                         <div class="input-group mb-3">
                             <span class="input-group-btn mr-2">
-                                <button type="button" class="decrement-qty btn btn-danger btn-number rounded-0" data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}" data-type="minus">
+                                <button type="button" class="decrement-qty btn btn-danger btn-number rounded-0" data-item_id="{{ item.product.id }}" id="decrement-qty_{{ item.product.id }}" data-type="minus">
                                     <span class="glyphicon glyphicon-minus">-</span>
-                            </button>
+                                </button>
                             </span>
-                            <input type="text" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" name="quantity" class="form-control input-number qty_input" value="{{ item.quantity }}" min="1" max="99">
+                            <input type="text" data-item_id="{{ item.product.id }}" id="id_qty_{{ item.product.id }}" name="quantity" class="form-control input-number qty_input" value="{{ item.quantity }}" min="1" max="99">
                             <span class="input-group-btn ml-2">
-                                <button type="button" class="increment-qty btn btn-success btn-number rounded-0" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}" data-type="plus">
+                                <button type="button" class="increment-qty btn btn-success btn-number rounded-0" data-item_id="{{ item.product.id }}" id="increment-qty_{{ item.product.id }}" data-type="plus">
                                     <span class="glyphicon glyphicon-plus">+</span>
                                 </button>
                             </span>
                         </div>
                     </form>
+                    
                     <h6 class="card-title">Subtotal: €{{ item.subtotal }}</h6>
                     <div class="d-flex justify-content-center align-items-center mt-2">
                         <a class="btn-sm update-link btn-light mr-2"><small>Update</small></a>

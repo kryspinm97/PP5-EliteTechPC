@@ -16,7 +16,7 @@
           <img class="w-100 h-auto" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
         </a>
         {% endif %}
-        <div>
+        <div class="py-4">
           {% if product.rating %}
             <p class="lead mb-0 text-muted"><i class="fas fa-star"></i> {{ product.rating }}/5</p>
           {% else %}
@@ -42,8 +42,8 @@
           </a>
         </p>
         {% endif %}
-        <p class="">{{ product.description }}</p>
-        <div class="">
+        <p>{{ product.description }}</p>
+        <div>
           <h6><strong>Processor:</strong> {{ product.processor }}</h6>
           <h6><strong>Graphics Card:</strong> {{ product.graphics_card }}</h6>
           <h6><strong>RAM:</strong> {{ product.ram }}</h6>
