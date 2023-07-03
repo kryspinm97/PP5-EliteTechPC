@@ -15,7 +15,7 @@
           </div>
       </div>
       {% if grand_total and not on_profile_page %}
-          <h5 class="fw-bold text-black py-1">Your Bag ({{ product_count }})</h5>
+          <h5 class="fw-bold text-black py-1">Your Bag : <span class="badge badge-warning badge-pill">{{ product_count }}</span></h5>
           <div class="bag-notification-wrapper">
               {% for item in bag_items %}
                   <div class="row">
