@@ -1,369 +1,360 @@
 /****** General CSS *****/
 
 body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f5f5;
 }
 
-/****** General CSS *****/
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+} 
 
+/****** General CSS *****/
 
 /*--- Product Template ----*/
 
 .product-details {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .products-line-break {
-    border-color:#767a7e;
+  border-color: #767a7e;
 }
 
 /*--- Product Template ----*/
 
-
-
 /*-- CARDS --*/
 
-
 .card-img-top {
-    max-width: 100%;
-    max-height: 350px;
-    object-fit: cover;
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: cover;
 }
 
 .card-img-view {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .card-img-index {
-    height: 250px;
-    object-fit: contain;
+  height: 250px;
+  object-fit: contain;
 }
 
 .card-title {
-    font-weight: 800;
+  font-weight: 800;
 }
-
 
 /*-- CARDS --*/
 
-
 /**** BASE HOME PAGE ****/
+
 .hero-image-home {
-    background-image: url(/media/PC-PARTS.webp);
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    position: relative;
-    z-index: 0;
+  background-image: url(/media/PC-PARTS.webp);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+  z-index: 0;
 }
 
 .hero-image-home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
 .hero-text {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text h1 {
-    font-size: 4rem;
-    font-weight: 900;
-    color: #ffff;
-    text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffff;
+  text-transform: uppercase;
 }
 
 .hero-text-button {
-    text-transform: uppercase;
-    color: #fdfefe;
-    font-weight: 700;
-    padding: 0.8rem;
-    font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #fdfefe;
+  font-weight: 700;
+  padding: 0.8rem;
+  font-size: 1.3rem;
 }
 
 .add-cart-button {
-    text-transform: uppercase;
-    color: #343A40;
-    font-weight: 700;
-    background-color: #FFC107;
-    border-style: none;
-    padding: 0.8rem;
-    font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #343A40;
+  font-weight: 700;
+  background-color: #FFC107;
+  border-style: none;
+  padding: 0.8rem;
+  font-size: 1.3rem;
 }
 
 .section-heading {
-    margin-top: 20px;
-    font-weight: 800;
+  margin-top: 20px;
+  font-weight: 800;
 }
 
 .bagging-area {
-    margin-top :50px;
+  margin-top: 50px;
 }
 
-
 /**** BASE HOME PAGE ****/
-
 
 /*---- NAVBAR ----*/
 
 .nav-link {
-    padding: 0.5rem;
-    color:#343a40;
+  padding: 0.5rem;
+  color: #343a40;
 }
 
 .navbar-right {
-    color: black;
+  color: black;
 }
 
 .logo-font {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #343A40;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #343A40;
 }
 
 #delivery-banner {
-    font-size: 0.2rem;
-    color: #343A40;
-    background-color: #FFC107;
+  font-size: 0.2rem;
+  color: #343A40;
+  background-color: #FFC107;
 }
 
 .navbar-brand-pc {
-    font-weight: 800;
-    color: #007bff;
+  font-weight: 800;
+  color: #007bff;
 }
 
 .fa-user,
 .fa-cart-shopping {
-    color:#007bff;
+  color: #007bff;
 }
 
 /*---- NAVBAR ----*/
 
-
-
 /*--- FOOTER ---*/
 
 .fa-footer-icons .footer-fa-icon-colors {
-    color: #007bff;
+  color: #007bff;
 }
 
 .fa-star {
-    color: #FFC107;
+  color: #FFC107;
 }
 
 .fa-search {
-    color :#007bff;
+  color: #007bff;
 }
 
-.fa-product-hunt, .fa-address-book{
-    color: #007bff;
+.fa-product-hunt,
+.fa-address-book {
+  color: #007bff;
 }
 
 .footer-headers h6 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .btn-warning {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .footer {
-    margin-top: auto !important;
-    background-color: #343A40;
-    color:#fdfefe;
+  margin-top: auto !important;
+  background-color: #343A40;
+  color: #fdfefe;
 }
 
 .btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    border-radius: 50px;
+  height: 42px;
+  width: 42px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50px;
 }
 
 .btt-link,
 .update-link,
 .remove-item {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
 .message-container {
-    position: fixed;
-    top: 72px;
-    right: 75px;
-    z-index: 99999999999;
-
+  position: fixed;
+  top: 72px;
+  right: 75px;
+  z-index: 99999999999;
 }
 
 .custom-toast {
-    overflow: visible;
+  overflow: visible;
 }
 
 .toast-capper {
-    height:10px;
+  height: 10px;
 }
 
 .border-info {
-    border-color:#007bff !important;
+  border-color: #007bff !important;
 }
-
 
 /*--- FOOTER ---*/
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: -10px;
+  right: 36px;
 }
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
-    border-bottom-color: #007bff !important;
+  border-bottom-color: #007bff !important;
 }
 
 .arrow-secondary {
-    border-bottom-color: #6c757d !important;
+  border-bottom-color: #6c757d !important;
 }
 
 .arrow-success {
-    border-bottom-color: #28a745 !important;
+  border-bottom-color: #28a745 !important;
 }
 
 .arrow-danger {
-    border-bottom-color: #dc3545 !important;
+  border-bottom-color: #dc3545 !important;
 }
 
 .arrow-warning {
-    border-bottom-color: #ffc107 !important;
+  border-bottom-color: #ffc107 !important;
 }
 
 .arrow-info {
-    border-bottom-color: #17a2b8 !important;
+  border-bottom-color: #17a2b8 !important;
 }
 
 .arrow-light {
-    border-bottom-color: #f8f9fa !important;
+  border-bottom-color: #f8f9fa !important;
 }
 
 .arrow-dark {
-    border-bottom-color: #343a40 !important;
+  border-bottom-color: #343a40 !important;
 }
 
 .bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Product Form */
 
 .btn-file {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
+  border-radius: 0;
+  border-color: #dc3545;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  border-radius: 0;
 }
 
 #mc_embed_signup {
-    background: #343A40;
-    false;
-    width: 600px;
+  background: #343A40;
+  false;
+  width: 600px;
 }
 
 #mc_embed_signup input {
-    border-radius: 0 !important
+  border-radius: 0 !important
 }
 
 #mc_embed_signup .asterisk {
-    color: #FFC107 !important
+  color: #FFC107 !important
 }
 
 .footer hr {
-    border-color:#ffc107;
+  border-color: #ffc107;
 }
-
 
 .product-forms,
 .profile-forms,
 .bag-form {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color:#FFC107;
+  background-color: #FFC107;
 }
 
 .carousel-item img {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-.carousel-item img:hover {
-    transform: scale(1.05) translateZ(0);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
+.carousel-item img:hover {
+  transform: scale(1.05) translateZ(0);
+}
 
 /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 
 @media (max-width: 400px) {
-    .navbar-nav .list-inline-item {
-      width: 33.33%;
-      text-align: center;
-      display: inline-block;
-      vertical-align: top;
-    }
-    .navbar-nav .shopping-cart-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
-
-    .hero-text h1 {
-        font-size: 3rem;
-    }
-
+  .navbar-nav .list-inline-item {
+    width: 33.33%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
   }
-  
-  
+  .navbar-nav .shopping-cart-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+}

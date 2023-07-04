@@ -1,9 +1,7 @@
-# EliteTechPC #
+# EliteTechPC - Prebuilt PC STORE #
 
 * Here I have created EliteTechPC - Prebuilt Computers which is a B2C e-commerce site. The site allows the users to have a look around for their next potential home office pc, a workstation for heavy duty work or even a high performance gaming machine. There is loads of features currently implemented into the website with more to come.
 Registered users gain access to My Profile which lets them update their delivery information and track their orders.
-
-<hr>
 
 ![ScreenShot](./documents/readme_images/AmiResponsiveImg.png)
 
@@ -11,19 +9,7 @@ The live version of the website is available for you here : <a href="https://eli
 
 # README CONTENTS # 
 
-<hr>
-
-* ## [UX](#ux-1)
-   * [User Stories](#user-stories)
-   * [Agile Methodologies](#agile-methodologies)
-   * [The Scope](#1-scope)
-   * [Structure](#2-structure)
-   * [Skeleton](#3-skeleton)
-   * [Surface](#4-surface)
-
-* ## [Credits](#credits-1)
-
-<hr>
+    Links for all Readme Content :
 
 # UX #
 
@@ -49,9 +35,7 @@ By addressing these goals, EliteTechPC aims to create a compelling and user-cent
 
 <hr>    
 
-## Agile Methodologies ##
-
-<hr>
+# Agile Methodologies #
 
 The Agile Methodology approach was adopted during the development of the EliteTechPC - E-Commerce Prebuilt PC store. I have utilized GitHub's built-in features such as issue tracking and project management to effectively manage tasks and monitor progress.
 
@@ -61,13 +45,11 @@ While the application is still a work in progress, it is continuously evolving w
 
 <hr>
 
-## 1. Scope ## 
+# 1. Scope # 
 
 EliteTechPC is an E-Commerce website offering a wide range of prebuilt computers. The scope of this project is to develop a fully functional and user-friendly online store that allows customers to browse, purchase, and manage their orders seamlessly.
 
-<hr>
-
-## 2. Structure ##
+# 2. Structure #
 
 * Features and Functionality :
     * User Registration and Authentication :
@@ -92,26 +74,24 @@ EliteTechPC is an E-Commerce website offering a wide range of prebuilt computers
     * Admin Panel :
         * Implement an admin panel for site administrators to manage products, orders and user accounts.
         * Enable inventory management, including stock updates and product additions or removals.
+    * Profile Page :
+        * Implement a user profile page to update their delivery information for future purchases and track orders.
     
 
-<hr>
-
-## 3. Skeleton ##
+# 3. Skeleton #
 
 Here is a basic wireframe of the website's layout : 
-![ScreenShot]()
+    
+    Wireframe Sketch Picture Here
 
 Here is the database schema for the project : 
-![ScreenShot]()
 
-<hr>
-
-## 4. Surface ## 
-
-The design of CarStyleAutos is clean and modern, with a focus on readability and ease of use. The color scheme consists primarily of black,white, shades of gray, with red accents used sparingly for emphasis.
+    DatabaseSchema Picture Here
 
 
-## Colors :
+# 4. Surface # 
+
+## Colors ##
 
 Here's the primary pallete of colors I have used throughout this project.
 These are vibrant colors that I think offset each other really and work together. 
@@ -119,7 +99,7 @@ These are vibrant colors that I think offset each other really and work together
 ![ScreenShot](./documents/readme_images/Colors-Pallete.png)
 
 
-## Layout -
+## Layout ##
 
 The layout of the EliteTechPC website is designed to be responsive and user-friendly across various devices thanks to Bootstrap! The website utilizes the Bootstrap framework to ensure a consistent and visually appealing experience. The layout elements are :
 
@@ -162,42 +142,23 @@ The layout of the EliteTechPC website is designed to be responsive and user-frie
 
 Overall, EliteTechPC website layout aims to provide a visually appealing and intuitive user interface, ensuring that users can easily navigate, explore and engage with the range of prebuilt computers offered by the store.
 
-<hr>
 
 # Testing # 
+
+    Details for all the testing done through the project are in here.
 
  * I have created a seperate markdown documentation for the testing of this project. 
 
  - You can view the testing here : [Testing.MD](./TESTING.md)
 
- <hr>
-
 # Deployment #
 
-* ## Heroku.com Service ##
+    Describe the Full Deployment Cycle for the Project Here. 
+    Followed by a Deployed Site Link
 
-  * Here we log in or create an account to begin with.
-  * On the dashboard view click 'Create New App' from the dropdown menu
-  * Choose your app-name and region
-  * Setup the CONFIG_VARS in the Settings tab in your project. 
-      * SECRET_KEY
-      * DATABASE_URL
-
-      These three url's are to be set up and configured in your project.
-      These connect your Database , Cloudinary and your Django Enviroment Key.
-  * In the buildpack section in the settings tab add Python , then save changes.
-  * Last but not least Link your project under the Deploy tab by selecting it from your github repository.
-
-* ## Final Steps #
-
-  * Make sure your settings.py option DEBUG = True is set to FALSE.
-  * Ensure you have your Procfile created with the following code :
-      * web: gunicorn carstyleautos.wsgi
+* You can find the deployed version of the website here : <a href="" target="_blank">EliteTechPC</a>
 
 
-* You can find the deployed version of the website here : <a href="https://carstyleautos-blog.herokuapp.com" target="_blank">CarStyleAutos</a>
-
-<hr>
 
 # Technologies Used #
 
@@ -221,7 +182,7 @@ Overall, EliteTechPC website layout aims to provide a visually appealing and int
   * <a href="https://heroku.com/">Heroku (Application hosting service)</a>
   * <a href="https://www.lucidchart.com/pages/">Lucidchart (Online Application for Flowcharts/Diagrams)</a>
 
-<hr>
+
 
 # Credits #
 
@@ -235,11 +196,11 @@ Overall, EliteTechPC website layout aims to provide a visually appealing and int
 * <a href="https://https://codeinstitute.net/">Code Institute</a>
 * <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Boostrap Documentations</a>
 
-* All those resources were very valuable in the progression of my project whenever I was stuck at any point in time I refered back to the course material as well as the online resources.
+All those resources were very valuable in the progression of my project whenever I was stuck at any point in time I refered back to the course material as well as the online resources.
 
-* All my images were sourced from google images, and any copyrights are reserved for the owners as these are just for display purposes only.
+    All my images were sourced from google images, and any copyrights are reserved for the owners as these are just for display purposes only.
 
 
-### I would like to thank Code Institute for supplying me with the necessary guidance for this project. And Tutor support for certain things I was completely stuck at.
+    I would especially like to thank you to Code Institute for supplying me with the necessary guidance for this project. I have went along the walkthrough projects and also used the full Gitpod template provided by them , which in all they have helped tremendously.
 
-[def]: #credits
+[Back To Top Link]
