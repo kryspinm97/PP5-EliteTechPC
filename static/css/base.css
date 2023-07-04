@@ -204,7 +204,7 @@ body {
 .message-container {
     position: fixed;
     top: 72px;
-    right: 15px;
+    right: 75px;
     z-index: 99999999999;
 
 }
@@ -220,6 +220,7 @@ body {
 .border-info {
     border-color:#007bff !important;
 }
+
 
 /*--- FOOTER ---*/
 
@@ -316,10 +317,31 @@ body {
     color: #FFC107 !important
 }
 
+.footer hr {
+    border-color:#ffc107;
+}
 
-.product-forms {
+
+.product-forms,
+.profile-forms,
+.bag-form {
     padding-bottom: 50px;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color:#FFC107;
+}
+
+.carousel-item img {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+.carousel-item img:hover {
+    transform: scale(1.05) translateZ(0);
+}
+
 
 /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */

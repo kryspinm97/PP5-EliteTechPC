@@ -21,22 +21,6 @@ The live version of the website is available for you here : <a href="https://eli
    * [Skeleton](#3-skeleton)
    * [Surface](#4-surface)
 
-* ## [Features](#features)
-    * [User Registration and Login](#user-registration-and-login)
-    * [Car Gallery](#car-gallery)
-    * [Commenting System](#commenting-system)
-    * [Responsive Design](#responsive-design)
-    * [Navigation Menu](#navigation-menu)
-    * [User Authorization and Authentication](#user-authentication-and-authorization)
-
-* ## [Deployment](#deployment-1)
-    * [Heroku Service](#herokucom-service)
-    * [Final Steps](#final-steps)
-
-* ## [Technologies Used]()
-    * [Languages Used](#languages)
-    * [Frameworks / Libraries](#frameworks--libraries--programs)
-
 * ## [Credits](#credits-1)
 
 <hr>
@@ -127,19 +111,15 @@ Here is the database schema for the project :
 The design of CarStyleAutos is clean and modern, with a focus on readability and ease of use. The color scheme consists primarily of black,white, shades of gray, with red accents used sparingly for emphasis.
 
 
-### Colors -
-* The primary color used in the site is #333 for text, with red (#dc3545) used sparingly for emphasis. The following other colors are used :
+## Colors :
 
-  * : background color for body
-  * #: background color for navbar, modal and footer
-  * #: primary red color for buttons and text
-  * #: primary text color
-  * #: shadow color for text
-  * #: lighter shade of light gray color
-  * #: light gray color for button backgrounds
-  * #: darker shade of primary red color
+Here's the primary pallete of colors I have used throughout this project.
+These are vibrant colors that I think offset each other really and work together. 
 
-### Layout -
+![ScreenShot](./documents/readme_images/Colors-Pallete.png)
+
+
+## Layout -
 
 The layout of the EliteTechPC website is designed to be responsive and user-friendly across various devices thanks to Bootstrap! The website utilizes the Bootstrap framework to ensure a consistent and visually appealing experience. The layout elements are :
 
@@ -237,7 +217,7 @@ Overall, EliteTechPC website layout aims to provide a visually appealing and int
   * <a href="https://github.com/">GitHub (Version Control alongside a Local Development Enviroment)</a>
   * <a href="https://fontawesome.com/">Font Awesome (Library of Icons)</a>
   * <a href="https://www.elephantsql.com/">ElephantSQL (Hosting service for the database for this application)</a>
-  * <a href="https://cloudinary.com/?&utm_campaign=1329&utm_content=instapagelogocta-selfservetest">Cloudinary (Cloud based storage for all media files)</a>
+  * <a href="https://aws.amazon.com/">AWS Amazon Hosting Service</a>
   * <a href="https://heroku.com/">Heroku (Application hosting service)</a>
   * <a href="https://www.lucidchart.com/pages/">Lucidchart (Online Application for Flowcharts/Diagrams)</a>
 
