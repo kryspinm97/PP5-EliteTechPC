@@ -18,7 +18,7 @@ class ContactUsForm(forms.ModelForm):
         ]
 
         labels = {
-            "name" : "Full Name",
+            "name": "Full Name",
         }
 
         widgets = {
