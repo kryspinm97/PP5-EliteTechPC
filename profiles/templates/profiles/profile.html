@@ -53,19 +53,19 @@
                                 </thead>
                                 <tbody>
                                     {% for order in orders %}
-                                    {% for item in order.lineitems.all %}
-                                        <tr>
-                                            <td>
-                                                <a href="{% url 'order_history' order.order_number %}"
-                                                    title="{{ order.order_number }}">
-                                                    {{ order.order_number|truncatechars:6 }}
-                                                </a>
-                                            </td>
-                                            <td>{{ order.date }}</td>
-                                            <td>{{ item.product.name }} x {{ item.quantity }}</td>
-                                            <td>{{ order.grand_total }}</td>
-                                        </tr>
-                                    {% endfor %}
+                                        {% for item in order.lineitems.all %}
+                                            <tr>
+                                                <td>
+                                                    <a href="{% url 'order_history' order.order_number %}"
+                                                        title="{{ order.order_number }}">
+                                                        {{ order.order_number|truncatechars:6 }}
+                                                    </a>
+                                                </td>
+                                                <td>{{ order.date }}</td>
+                                                <td>{{ item.product.name }} x {{ item.quantity }}</td>
+                                                <td>{{ order.grand_total }}</td>
+                                            </tr>
+                                        {% endfor %}
                                     {% empty %}
                                         <tr>
                                             <td colspan="4" class="text-center">You have no past orders.</td>
@@ -73,6 +73,26 @@
                                     {% endfor %}
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title rounded-0 text-center">Wishlist</h5>
+                        <div>
+                            {% if wishlist.products.all %}
+                                <ul>
+                                    {% for product in wishlist.products.all %}
+                                        <li>{{ product.name }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <p class="text-center">Your wishlist is empty.</p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

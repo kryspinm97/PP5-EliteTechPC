@@ -149,6 +149,12 @@ hr {
   color: #007bff;
 }
 
+.fa-heart {
+  font-size: 1.2rem;
+  border-style: none;
+  color: #dc3545;
+}
+
 /*---- NAVBAR ----*/
 
 /*--- FOOTER ---*/
@@ -336,6 +342,8 @@ hr {
 .carousel-item img:hover {
   transform: scale(1.05) translateZ(0);
 }
+
+
 
 /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */

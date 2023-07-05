@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from products.models import PrebuiltPC
 
 
 from django_countries.fields import CountryField
@@ -23,6 +24,24 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class Wishlist(models.Model):
+    """A model for the User's Wishlist"""
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+    products = models.ManyToManyField(PrebuiltPC, blank=True)
+
+    @property
+    def num_products(self):
+        """Returns the products count for Wishlist"""
+        return self.products.count()
+
+    def __str__(self):
+        """
+        Returns the name of the Wishlist username as a string
+        representation of the object.
+        """
+        return f"{self.user.username}'s Wishlist"
 
 
 @receiver(post_save, sender=User)

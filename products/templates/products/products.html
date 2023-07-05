@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-
 <div class="container align-items-center text-center py-1">
   {% if current_categories %}
     {% for category in current_categories %}
@@ -14,81 +13,104 @@
   <hr class="products-line-break">
 </div>
 
-
 <section class="py-3">
   <div class="container">
-      <div class="product-container col-12">
+    <div class="product-container col-12">
       <div class="row mt-1 mb-2">
-          <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-              <div class="sort-select-wrapper w-50">
-                  <select id="sort-selector" class="custom-select rounded-0 custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                      <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                      <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                      <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                      <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                      <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                      <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                      <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                      <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                      <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                  </select>
-              </div>
+        <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+          <div class="sort-select-wrapper w-50">
+            <select id="sort-selector"
+              class="custom-select rounded-0 custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+              <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+              <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)
+              </option>
+              <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)
+              </option>
+              <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to
+                high)</option>
+              <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to
+                low)</option>
+              <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+              <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+              <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)
+              </option>
+              <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category
+                (Z-A)</option>
+            </select>
           </div>
-          <div class="col-12 col-md-6 order-md-first">
-              <p class="text-muted mt-3 text-center text-md-left">
-                  {% if search_term or current_categories or current_sorting != 'None_None' %}
-                      <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
-                  {% endif %}
-                  {{ page_obj.paginator.count }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-              </p>
-          </div>
-      </div>
-    <div class="row">
-      {% for product in page_obj.object_list %}
-      <div class="col-md-4 py-4">
-        <div class="card card-home h-100 rounded-0">
-          {% if product.image %}
-          <a href="{% url 'products_details' product.id %}">
-            <img class="w-100 h-auto" src="{{ product.image.url }}"
-              alt="{{ product.name }}">
-          </a>
-          {% else %}
-          <a href="{% url 'products_details' product.id %}">
-            <img class="w-100 h-auto" src="{{ MEDIA_URL }}noimage.webp"
-              alt="{{ product.name }}">
-          </a>
-          {% endif %}
-          <div class="card-body text-center">
-            <h5 class="card-title fw-bold text-center text-uppercase">{{ product.name }}</h5>
-            {% if product.category %}
-            <p class="small mt-1 mb-0">
-              <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-              </a>
-            </p>
+        </div>
+        <div class="col-12 col-md-6 order-md-first">
+          <p class="text-muted mt-3 text-center text-md-left">
+            {% if search_term or current_categories or current_sorting != 'None_None' %}
+            <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
             {% endif %}
-          </div>
-          <div class="card-footer bg-white pt-0 border-0 text-right">
-            <div class="row">
-              <div class="col">
-                <h4 class="mb-0 text-center font-weight-bold py-1">€{{ product.price }}</h3>
-                {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                {% else %}
-                <small class="text-muted">No Rating</small>
-                {% endif %}
-                {% if request.user.is_superuser %}
-                <div class="text-left">
-                    <a class="btn-sm btn-outline-primary rounded-0" href="{% url 'edit_product' product.id %}">Edit</a> | 
-                    <a class="btn-sm btn-outline-danger rounded-0" href="{% url 'delete_product' product.id %}">Delete</a>
+            {{ page_obj.paginator.count }} Products{% if search_term %} found for
+            <strong>"{{ search_term }}"</strong>{% endif %}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        {% for product in page_obj.object_list %}
+        <div class="col-md-4 py-4">
+          <div class="card card-home h-100 rounded-0">
+            {% if product.image %}
+            <a href="{% url 'products_details' product.id %}">
+              <img class="w-100 h-auto" src="{{ product.image.url }}" alt="{{ product.name }}">
+            </a>
+            {% else %}
+            <a href="{% url 'products_details' product.id %}">
+              <img class="w-100 h-auto" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
+            </a>
+            {% endif %}
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold text-center text-uppercase">{{ product.name }}</h5>
+              {% if product.category %}
+              <p class="small mt-1 mb-0">
+                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                  <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                </a>
+              </p>
+              {% endif %}
+            </div>
+            <div class="card-footer bg-white pt-0 border-0 text-right">
+              <div class="row">
+                <div class="col">
+                  <h4 class="mb-0 text-center font-weight-bold py-1">€{{ product.price }}</h4>
+                  {% if product.rating %}
+                  <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                  {% else %}
+                  <small class="text-muted">No Rating</small>
+                  {% endif %}
+                  {% if request.user.is_superuser %}
+                  <div class="text-left mt-2">
+                    <a class="btn-sm btn-outline-primary rounded-0" href="{% url 'edit_product' product.id %}">
+                      Edit
+                    </a>
+                    <a class="btn-sm btn-outline-danger rounded-0" href="{% url 'delete_product' product.id %}">
+                      Delete
+                    </a>
+                  </div>
+                  {% elif request.user.is_authenticated %}
+                  <div class="text-right mt-2">
+                    <a class="btn-sm btn-outline-primary rounded-0 wishlist-btn"
+                      href="{% url 'add_to_wishlist' product.id %}" data-product-id="{{ product.id }}">
+                      <i class="fa-regular fa-heart"></i>
+                    </a>
+                  </div>
+                  {% else %}
+                  <div class="text-right mt-2">
+                    <a class="btn-sm btn-outline-primary rounded-0" href="{% url 'login' %}">
+                      <i class="fa-regular fa-heart"></i>
+                    </a>
+                  </div>
+                  {% endif %}
                 </div>
-                {% endif %}
               </div>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
 </section>
@@ -126,10 +148,6 @@
     {% endif %}
   </ul>
 </nav>
-
-
-
-
 
 {% endblock %}
 
