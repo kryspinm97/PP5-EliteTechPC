@@ -77,10 +77,10 @@ def remove_from_wishlist(request, product_id):
 
     """ Remove a product from the user's wishlist """
 
-    product = get_object_or_404(Product, id=product_id)
+    product = get_object_or_404(PrebuiltPC, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
 
-    product = get_object_or_404(Product, id=product_id)
+    product = get_object_or_404(PrebuiltPC, id=product_id)
     wishlist = Wishlist.objects.get(user=request.user)
 
     if product in wishlist.products.all():

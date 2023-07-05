@@ -155,6 +155,11 @@ hr {
   color: #dc3545;
 }
 
+.wishlist-image {
+  height: 80px;
+  width: 80px;
+}
+
 /*---- NAVBAR ----*/
 
 /*--- FOOTER ---*/

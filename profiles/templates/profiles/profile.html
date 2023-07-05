@@ -83,13 +83,31 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title rounded-0 text-center">Wishlist</h5>
+                        <hr></hr>
                         <div>
                             {% if wishlist.products.all %}
-                                <ul>
+                                <div class="wishlist-items ">
                                     {% for product in wishlist.products.all %}
-                                        <li>{{ product.name }}</li>
+                                        <div class="wishlist-item">
+                                            <div class="media align-items-center">
+                                                {% if product.image %}
+                                                    <img class="wishlist-image mr-3" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                {% else %}
+                                                    <img class="wishlist-image mr-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                {% endif %}
+                                                <div class="media-body">
+                                                    <h6 class="my-0">{{ product.name }}</h6>
+                                                    <p class="my-0 text-muted">Price: €{{ product.price }}</p>
+                                                </div>
+                                                <div>
+                                                    <a href="{% url 'add_to_bag' product.id %}?quantity=1" class="btn btn-primary">Add to Cart</a>
+                                                    <a href="{% url 'remove_from_wishlist' product.id %}" class="btn btn-danger">Remove</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
                                     {% endfor %}
-                                </ul>
+                                </div>
                             {% else %}
                                 <p class="text-center">Your wishlist is empty.</p>
                             {% endif %}

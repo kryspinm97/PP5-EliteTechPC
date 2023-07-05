@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ContactUsForm
 # Create your views here.
 
@@ -20,3 +20,8 @@ def contact_us(request):
     }
 
     return render(request, 'contact/contact.html', context)
+
+
+def contact_success(request):
+
+    return render(request, 'contact/contact_success.html')
