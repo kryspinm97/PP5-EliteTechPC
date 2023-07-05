@@ -3,13 +3,14 @@
 * Here I have created EliteTechPC - Prebuilt Computers which is a B2C e-commerce site. The site allows the users to have a look around for their next potential home office pc, a workstation for heavy duty work or even a high performance gaming machine. There is loads of features currently implemented into the website with more to come.
 Registered users gain access to My Profile which lets them update their delivery information and track their orders.
 
-![ScreenShot](./documents/readme_images/AmiResponsiveImg.png)
+![ScreenShot](./documents/readme_images/Ami-Responsive.png)
 
 The live version of the website is available for you here : <a href="https://elite-tech-pc-e966cb86c987.herokuapp.com/">EliteTechPC</a>
 
 # README CONTENTS # 
 
     Links for all Readme Content :
+
 
 # UX #
 
@@ -80,9 +81,9 @@ EliteTechPC is an E-Commerce website offering a wide range of prebuilt computers
 
 # 3. Skeleton #
 
-Here is a basic wireframe of the website's layout : 
+Here is a basic wireframe of the website's layout. This is the initial template I have started off with and worked my way around the other templates with this design: 
     
-    Wireframe Sketch Picture Here
+![ScreenShot](./documents/readme_images/WireframeBase.png)
 
 Here is the database schema for the project : 
 
@@ -198,9 +199,15 @@ Overall, EliteTechPC website layout aims to provide a visually appealing and int
 
 All those resources were very valuable in the progression of my project whenever I was stuck at any point in time I refered back to the course material as well as the online resources.
 
-    All my images were sourced from google images, and any copyrights are reserved for the owners as these are just for display purposes only.
+    All my images were sourced from google images,
+    and any copyrights are reserved for the owners as these are 
+    just for display purposes only.
 
 
-    I would especially like to thank you to Code Institute for supplying me with the necessary guidance for this project. I have went along the walkthrough projects and also used the full Gitpod template provided by them , which in all they have helped tremendously.
+    I would especially like to thank you to Code Institute
+    for supplying me with the necessary guidance for this project. 
+    I have went along the walkthrough projects and also used 
+    the full Gitpod template provided by them , 
+    which in all they have helped tremendously.
 
 [Back To Top Link]
