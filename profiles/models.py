@@ -14,13 +14,18 @@ class UserProfile(models.Model):
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_address_line1 = models.CharField(max_length=80, null=True, blank=True)
-    default_address_line2 = models.CharField(max_length=80, null=True, blank=True)
-    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    default_address_line1 = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_address_line2 = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_town_or_city = models.CharField(
+        max_length=40, null=True, blank=True)
     default_county = models.CharField(max_length=80, null=True, blank=True)
     default_post_code = models.CharField(max_length=20, null=True, blank=True)
-    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
-    default_country = CountryField(blank_label='Country', null=True, blank=True)
+    default_phone_number = models.CharField(
+        max_length=20, null=True, blank=True)
+    default_country = CountryField(
+        blank_label='Country', null=True, blank=True)
 
     def __str__(self):
         return self.user.username
@@ -28,7 +33,8 @@ class UserProfile(models.Model):
 
 class Wishlist(models.Model):
     """A model for the User's Wishlist"""
-    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE, blank=True, null=True)
     products = models.ManyToManyField(PrebuiltPC, blank=True)
 
     @property

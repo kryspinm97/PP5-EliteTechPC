@@ -50,6 +50,47 @@ hr {
   font-weight: 800;
 }
 
+.card-home {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-home img {
+  transition: transform 0.3s ease;
+}
+
+.card-home:hover img {
+  transform: scale(1.1);
+}
+
+.card-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-home:hover::before {
+  opacity: 1;
+}
+
+.card-home .card-body {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+}
+
+.card-home:hover .card-body {
+  transform: translateY(10px);
+}
+
+
 /*-- CARDS --*/
 
 /**** BASE HOME PAGE ****/
@@ -134,7 +175,7 @@ hr {
 }
 
 #delivery-banner {
-  font-size: 0.2rem;
+  font-size: 0.15rem;
   color: #343A40;
   background-color: #FFC107;
 }
@@ -229,6 +270,19 @@ hr {
   border-color: #007bff !important;
 }
 
+#heart-icon {
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#heart-icon:hover,
+#heart-icon:focus {
+  transform: scale(1.1);
+}
+
+#heart-icon:active {
+  transform: scale(1.2);
+}
+
 /*--- FOOTER ---*/
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -310,14 +364,18 @@ hr {
   border-radius: 0;
 }
 
-#mc_embed_signup {
-  background: #343A40;
-  false;
-  width: 600px;
+.mc-field-group {
+  width: 100% !important;
 }
+
 
 #mc_embed_signup input {
   border-radius: 0 !important
+}
+
+#mc_embed_signup .button {
+  font-size: 1rem !important;
+  background-color:#FFC107 !important;
 }
 
 #mc_embed_signup .asterisk {
@@ -325,7 +383,7 @@ hr {
 }
 
 .footer hr {
-  border-color: #ffc107;
+  border-color: #FFC107;
 }
 
 .product-forms,
@@ -347,6 +405,7 @@ hr {
 .carousel-item img:hover {
   transform: scale(1.05) translateZ(0);
 }
+
 
 
 

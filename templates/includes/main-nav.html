@@ -1,9 +1,10 @@
-<div class="collapse navbar-collapse" id="main-nav">
+
+<!-- MAIN NAVIGATION BAR WITH DROPDOWN LINKS TO DIFFERENT AREAS OF THE WEBSITE -->
+
+<div class="collapse navbar-collapse">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
+            <a class="font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Products</a>
             <div class="dropdown-menu rounded-0 border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
@@ -12,9 +13,7 @@
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="computers-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Computers
-            </a>
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="computers-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Computers</a>
             <div class="dropdown-menu rounded-0 border-0" aria-labelledby="computers-link">
                 <a href="{% url 'products' %}?category=low-end" class="dropdown-item">Budget</a>
                 <a href="{% url 'products' %}?category=mid-end" class="dropdown-item">Mid Level</a>
@@ -22,9 +21,9 @@
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5" href="{% url 'contact' %}" id="contact-us-link">
-                Contact Us
-            </a>
+            <a class="font-weight-bold nav-link mr-5" href="{% url 'contact' %}" id="contact-us-link">Contact Us</a>
         </li>
     </ul>
 </div>
+
+<!-- MAIN NAVIGATION BAR WITH DROPDOWN LINKS TO DIFFERENT AREAS OF THE WEBSITE -->

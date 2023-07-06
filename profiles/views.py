@@ -13,6 +13,7 @@ def profile(request):
 
     profile = get_object_or_404(UserProfile, user=request.user)
 
+    # Get the user's wishlist, or create a new one if it doesn't exist
     try:
         wishlist = Wishlist.objects.get(user=request.user)
     except Wishlist.DoesNotExist:
@@ -39,6 +40,8 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """ Display a past order confirmation. """
+
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
