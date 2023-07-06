@@ -11,6 +11,30 @@ The live version of the website is available for you here : <a href="https://eli
 
     Links for all Readme Content :
 
+    
+* ## [UX](#ux-1)
+   * [User Stories](#user-stories)
+   * [Agile Methodologies](#agile-methodologies)
+   * [The Scope](#1-scope)
+   * [Structure](#2-structure)
+   * [Skeleton](#3-skeleton)
+   * [Surface](#4-surface)
+
+* ## [Testing](#testing-1)
+    *
+
+   
+
+* ## [Deployment](#deployment-1)
+
+
+* ## [Technologies Used](#)
+
+    * [Languages Used](#languages)
+    * [Frameworks / Libraries](#frameworks--libraries--programs)
+
+* ## [Credits](#credits-1)
+
 
 # UX #
 
@@ -85,9 +109,9 @@ Here is a basic wireframe of the website's layout. This is the initial template 
     
 ![ScreenShot](./documents/readme_images/WireframeBase.png)
 
-Here is the database schema for the project : 
+Here is the Database Schema for the project : 
 
-    DatabaseSchema Picture Here
+![ScreenShot](./documents/readme_images/Database%20Schema.png)
 
 
 # 4. Surface # 
@@ -109,39 +133,72 @@ The layout of the EliteTechPC website is designed to be responsive and user-frie
     * The EliteTechPC logo is prominently displayed, along with navigation links to different sections of the website.
     * The header also includes additional elements such as a search barm user account options and a shopping cart.
 
-    * ![ScreenShot]()
+    ![ScreenShot](./documents/readme_images/Page-Header.png)
+
+<hr>
 
 2. Hero Section:
     * The Hero section showcases a visually appealing image related to the computer hardware for PC's 
     * It features a compelling headline and a call-to-action button to encourage users to start to explore the products the website has to offer.
 
-    * ![ScreenShot]()
+    ![ScreenShot](./documents/readme_images/Hero-Section.png)
+
+<hr>
 
 3. Product Display:
     * Products are presented in a grid format, allowing users to browse through different categories and options.
     * Each product listing includes key information such as product name, image, price and rating.
     * Users can click on a product to view more details including specifications and a quantity input for however amount of items they desire.
 
-    * ![ScreenShot]()
+    ![ScreenShot](./documents/readme_images/Products-Display.png)
+
+<hr>
 
 4. Shopping Cart and Checkout:
     * A user friendly shopping cart interface allows customers to add products, adjust quantities and proceed to checkout.
     * The checkout process includes collecting necessary information like shipping address and payment details.
     * Users are guided through the steps and provided with clear instructions to complete their purchase securely.
 
-    * ![ScreenShot]()
+    ![ScreenShot](./documents/readme_images/Shopping-Cart.png)
+    ![ScreenShot](./documents/readme_images/Checkout.png)
+
+<hr>
 
 5. Content Cards: 
     * Content cards are utilized throughout the website to present various information such as featured products, categories etc.
 
-    * ![ScreenShot]()
+    ![ScreenShot](./documents/readme_images/Content-Cards1.png)
+    ![ScreenShot](./documents/readme_images/Content-Cards2.png)
+<hr>
 
 6. Footer:
     * The footer section appears at the bottom of the page , featuring essential site information such as contact details and links to important pages.
 
-    * ![ScreenShot]()
+    ![ScreenShot](./documents/readme_images/Footer.png)
 
 Overall, EliteTechPC website layout aims to provide a visually appealing and intuitive user interface, ensuring that users can easily navigate, explore and engage with the range of prebuilt computers offered by the store.
+
+# E-Commerce Model #
+
+EliteTechPC is an e-commerce platform that specializes in selling high-quality prebuilt PCs to consumers. Our mission is to provide customers with the top-of-the-line computer systems that deliver exceptional performance, reliability and value. Target market includes both gaming enthusiasts and professionals in need of high-performance machines. We cater to individuals who value superior hardware components, seamless functionality and latest advancements in technology.
+This is a Business to Consumer model and it is catered to be as simple yet intuitive for the consumer along with the sign-ups to the newsletter with potential deals and more.
+
+
+# Social Media #
+
+## Marketing ## 
+
+Here I have made a Social Media Marketing Page for the EliteTechPC store. It is a fantastic way to boost and increase engaement within the business and in increasing sales. Here is the screenshot of the whole page available to anyone.
+
+![ScreenShot](./documents/readme_images/Elite-Tech-PC-Facebookpage.png)
+
+
+## Newsletter ##
+
+I have also included into the website a Mailchimp service that handles the newsletter automation for customers. It would contain any deals , special offers, new products and more. Anyone can sign up hassle-free by entering their email address in the input box provided.
+
+![ScreenShot](./documents/readme_images/Footer.png)
+
 
 
 # Testing # 
@@ -158,7 +215,6 @@ Overall, EliteTechPC website layout aims to provide a visually appealing and int
     Followed by a Deployed Site Link
 
 * You can find the deployed version of the website here : <a href="" target="_blank">EliteTechPC</a>
-
 
 
 # Technologies Used #

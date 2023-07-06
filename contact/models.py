@@ -7,6 +7,9 @@ class ContactUs(models.Model):
 
     """ Model type for contact form / messages """
 
+    class Meta:
+        verbose_name_plural = 'Contact Us'
+
     CATEGORY_CHOICES = [
         ('Technical', 'Technical'),
         ('General Inquiry', 'General Inquiry'),
