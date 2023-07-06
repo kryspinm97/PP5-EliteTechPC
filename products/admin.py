@@ -5,6 +5,9 @@ from .models import Category, PrebuiltPC
 
 
 class ProductAdmin(admin.ModelAdmin):
+
+    """ Admin configuration for the PrebuiltPC model """
+
     list_display = (
         'sku',
         'name',
@@ -18,6 +21,9 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
+
+    """ Admin configuration for the Category model """
+
     list_display = (
         'friendly_name',
         'name',

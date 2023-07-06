@@ -5,6 +5,8 @@ from .models import PrebuiltPC, Category
 
 class ProductForm(forms.ModelForm):
 
+    """ Form for adding/editing a product """
+
     class Meta:
         model = PrebuiltPC
         fields = '__all__'

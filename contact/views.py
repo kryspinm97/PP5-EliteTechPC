@@ -24,4 +24,6 @@ def contact_us(request):
 
 def contact_success(request):
 
+    """ Render the Contact Success HTML page """
+
     return render(request, 'contact/contact_success.html')

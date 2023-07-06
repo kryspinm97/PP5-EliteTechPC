@@ -5,6 +5,8 @@ from django.db import models
 
 class Category(models.Model):
 
+    """ Model to represent categories of products """
+
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -16,6 +18,9 @@ class Category(models.Model):
 
 
 class PrebuiltPC(models.Model):
+
+    """ Model to represent prebuilt PCs """
+
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=100)

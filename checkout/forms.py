@@ -22,7 +22,7 @@ class OrderForm(forms.ModelForm):
         )
         widgets = {
             'country': forms.Select(attrs={'class': 'form-control rounded-0'}),
-            
+
         }
 
     def __init__(self, *args, **kwargs):

@@ -11,6 +11,8 @@ from .forms import ProductForm
 
 def products_prebuiltpc(request):
     """ A view to show the list of products along with search and sorting """
+
+    # Retrieve all products
     products = PrebuiltPC.objects.all()
     query = request.GET.get('q')
     category_values = request.GET.getlist('category')
@@ -18,19 +20,21 @@ def products_prebuiltpc(request):
     direction = 'asc'
     categories = None
 
+    # Filter products based on search query
     if query:
         queries = Q(name__icontains=query) | Q(graphics_card__icontains=query) | Q(processor__icontains=query) | Q(
             ram__icontains=query) | Q(storage__icontains=query)
         products = products.filter(queries)
 
+    # Filter products based on selected categories
     if category_values:
         category_values = category_values[0].split(',') if ',' in category_values[0] else category_values
-        # Ignore empty strings
         category_values = [value for value in category_values if value]
         if category_values:
             categories = Category.objects.filter(name__in=category_values)
             products = products.filter(category__in=categories)
 
+    # Sort products
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -121,7 +125,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('products_details', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

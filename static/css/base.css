@@ -60,7 +60,7 @@ hr {
 }
 
 .card-home:hover img {
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 .card-home::before {
@@ -382,6 +382,16 @@ hr {
   color: #FFC107 !important
 }
 
+.foot {
+  width: 100% !important;
+}
+
+.mailchimp-horizontal {
+  border-color: #767a7e !important;
+  border-width: 3px;
+  border-radius: 25px;
+}
+
 .footer hr {
   border-color: #FFC107;
 }
@@ -404,6 +414,11 @@ hr {
 
 .carousel-item img:hover {
   transform: scale(1.05) translateZ(0);
+}
+
+.checkout-success-img {
+  height: 50px;
+  width: 50px;
 }
 
 
