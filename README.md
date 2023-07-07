@@ -9,9 +9,6 @@ The live version of the website is available for you here : <a href="https://eli
 
 # README CONTENTS # 
 
-    Links for all Readme Content :
-
-    
 * ## [UX](#ux-1)
    * [User Stories](#user-stories)
    * [Agile Methodologies](#agile-methodologies)
