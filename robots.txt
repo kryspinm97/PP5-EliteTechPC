@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /admin/
+Disallow: /profiles/
+Disallow: /checkout/
+Disallow: /bag/
+Sitemap: https://elite-tech-pc-e966cb86c987.herokuapp.com/sitemap.xml
