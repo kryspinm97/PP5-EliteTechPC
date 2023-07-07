@@ -2,7 +2,6 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="">
 {% endblock %}
 
 {% block content %}
@@ -13,11 +12,11 @@
         </div>
         <div class="card shadow">
             <div class="card-body">
-                <form method="POST" action="#" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'contact' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="text-center">
-                        <a class="btn btn-outline-dark rounded-0" href="#">Cancel</a>
+                        <a class="btn btn-outline-dark rounded-0" href="{% url 'home' %}">Cancel</a>
                         <button class="btn btn-primary rounded-0" type="submit">Submit</button>
                     </div>
                 </form>

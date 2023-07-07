@@ -14,68 +14,92 @@ def add_to_bag(request, item_id):
     product = get_object_or_404(PrebuiltPC, pk=item_id)
 
     if request.method == 'POST':
-        quantity = int(request.POST.get('quantity', 1))
-        bag = request.session.get('bag', {})
-
-        if item_id in bag:
-            bag[item_id] += quantity
-            messages.success(request, f'Updated quantity of {product.name} in your bag.')
-        else:
-            bag[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag.')
-
-        request.session['bag'] = bag
-        return redirect('view_bag')
+        quantity = request.POST.get('quantity', '')
     elif request.method == 'GET':
-        quantity = int(request.GET.get('quantity', 1))
-        bag = request.session.get('bag', {})
-        
-        if item_id in bag:
-            bag[item_id] += quantity
-            messages.success(request, f'Updated quantity of {product.name} in your bag.')
-        else:
-            bag[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag.')
-
-        request.session['bag'] = bag
-        return redirect('view_bag')
+        quantity = request.GET.get('quantity', '')
     else:
         messages.error(request, 'Invalid request.')
+        return redirect('products_details', product_id=item_id)
 
-    return redirect('products_details', product_id=item_id)
+    if not quantity:
+        messages.warning(request, 'Please enter a quantity.')
+        return redirect('products_details', product_id=item_id)
+
+    try:
+        quantity = int(quantity)
+        bag = request.session.get('bag', {})
+        max_quantity = 10  # Adjust this value to set the maximum quantity
+
+        if quantity <= 0:
+            messages.warning(request, 'Quantity must be greater than zero.')
+        elif quantity > max_quantity:
+            messages.warning(request, f'Maximum quantity for {product.name} is {max_quantity}.')
+        else:
+            if item_id in bag:
+                bag[item_id] += quantity
+                messages.success(request, f'Updated quantity of {product.name} in your bag.')
+            else:
+                bag[item_id] = quantity
+                messages.success(request, f'Added {product.name} to your bag.')
+
+        request.session['bag'] = bag
+        return redirect('view_bag')
+    except ValueError:
+        messages.warning(request, 'Invalid quantity value.')
+        return redirect('products_details', product_id=item_id)
 
 
 def adjust_bag(request, item_id):
     """ Adjust quantity of desired products in the cart """
 
+    """ Adjust quantity of desired products in the cart """
+
     product = get_object_or_404(PrebuiltPC, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
-    bag = request.session.get('bag', {})
+    quantity = request.POST.get('quantity', '')
 
-    if quantity > 0:
-        bag[item_id] = quantity
-        messages.success(
-            request, f'Updated {product.name} quantity to {bag[item_id]}')
-    else:
-        bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your basket')
+    if not quantity:
+        messages.warning(request, 'Please enter a quantity.')
+        return redirect('view_bag')
 
-    request.session['bag'] = bag
-    return redirect(reverse('view_bag'))
+    try:
+        quantity = int(quantity)
+        bag = request.session.get('bag', {})
+        max_quantity = 10  # Adjust this value to set the maximum quantity
+
+        if quantity <= 0:
+            messages.warning(request, 'Quantity must be greater than zero.')
+        elif quantity > max_quantity:
+            messages.warning(request, f'Maximum quantity for {product.name} is {max_quantity}.')
+        else:
+            if quantity == 0:
+                bag.pop(item_id)
+                messages.success(request, f'Removed {product.name} from your basket')
+            else:
+                bag[item_id] = quantity
+                messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+
+        request.session['bag'] = bag
+    except ValueError:
+        messages.warning(request, 'Invalid quantity value.')
+
+    return redirect('view_bag')
 
 
 def remove_from_bag(request, item_id):
-    """ Remove an item from the shopping bag """
 
-    product = get_object_or_404(PrebuiltPC, pk=item_id)
-    bag = request.session.get('bag', {})
+    """ Remove item from the shopping bag """
+    try:
+        bag = request.session.get('bag', {})
+        product = get_object_or_404(PrebuiltPC, pk=item_id)
 
-    if item_id in bag:
-        del bag[item_id]
+        if item_id in bag:
+            bag.pop(item_id)
+            messages.success(request, f'Removed {product.name} from your bag')
+        else:
+            messages.error(request, f'{product.name} is not in your bag')
+
         request.session['bag'] = bag
-        messages.success(request, f'Removed {product.name} from your basket')
-        # Return HTTP status 204 (No Content) for successful removal
         return HttpResponse(status=204)
-
-    # Return HTTP status 400 (Bad Request) if item not found in bag
-    return HttpResponse(status=400)
+    except Exception as e:
+        messages.error(request, 'Error occurred while removing item from bag')
+        return HttpResponse(status=400)

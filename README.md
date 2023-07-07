@@ -74,6 +74,11 @@ The live version of the website is available for you here : <a href="https://eli
     * Delivery a responsive and user-friendly design that functions well on all devices
     * The ability to add/edit/remove/update items in the shopping cart
 
+
+User Stories : 
+
+![ScreenShot](./documents/readme_images/Agile-UserStories.png)
+
 By addressing these goals, EliteTechPC aims to create a compelling and user-centric experience for both the site owner and the users, satisfaction and a seamless interaction with the platform.
 
 <hr>    
@@ -85,6 +90,10 @@ The Agile Methodology approach was adopted during the development of the EliteTe
 User stories were categorized into "Must-Have" and "Could-Add" features to prioritize the development process. This allowed for systematic approach to implementing essential functionalities while leaving room for future enhancements.
 
 While the application is still a work in progress, it is continuously evolving with a focus on delivering a fully functional and feature-rich online store for users to explore. I remain dedicated to expanding the platforms capabilities and provide an exceptional shopping experience for customers.
+
+GitHub Project Workboard :
+
+![ScreenShot](./documents/readme_images/Agile-Workboard.png)
 
 <hr>
 
@@ -173,7 +182,7 @@ The layout of the EliteTechPC website is designed to be responsive and user-frie
     * Products are presented in a grid format, allowing users to browse through different categories and options.
     * Each product listing includes key information such as product name, image, price and rating.
     * Users can click on a product to view more details including specifications and a quantity input for however amount of items they desire.
-    * The edit and delete ability is only and only available for the site administrator.
+    * The edit and delete ability is strictly only and only available for the site administrator.
 
     ![ScreenShot](./documents/readme_images/Products-Display.png)
 
