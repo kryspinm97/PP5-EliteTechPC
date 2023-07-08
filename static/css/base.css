@@ -89,6 +89,12 @@ hr {
   transform: translateY(10px);
 }
 
+.index-image {
+  height: auto;
+  width: 100%;
+}
+
+
 /* Base Home Page */
 
 .hero-image-home {
@@ -155,7 +161,7 @@ hr {
 
 .nav-link {
   padding: 0.5rem;
-  color: #343a40;
+  color: #343A40 !important;
 }
 
 .navbar-right {
@@ -169,9 +175,12 @@ hr {
 }
 
 #delivery-banner {
-  font-size: 0.15rem;
   color: #343A40;
   background-color: #FFC107;
+}
+
+#delivery-banner p {
+  font-size: 1.5rem;
 }
 
 .navbar-brand-pc {
@@ -367,6 +376,7 @@ hr {
 #mc_embed_signup .button {
   font-size: 1rem !important;
   background-color: #FFC107 !important;
+  color: #343A40 !important;
 }
 
 #mc_embed_signup .asterisk {

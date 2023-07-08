@@ -79,7 +79,7 @@
                 <hr>
                 <div class="card shadow">
                     <div class="card-body">
-                        <h5 class="card-title rounded-0 text-center">Wishlist <i class="fa-solid fa-heart"></i></h5>
+                        <h5 class="card-title rounded-0 text-center">{{ user.username }}'s Wishlist <i class="fa-solid fa-heart"></i></h5>
                         <hr></hr>
                         <div>
                             {% if wishlist.products.all %}
@@ -88,17 +88,17 @@
                                         <div class="wishlist-item">
                                             <div class="media align-items-center">
                                                 {% if product.image %}
-                                                    <img class="wishlist-image mr-3" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                    <img class="wishlist-image mr-2" src="{{ product.image.url }}" alt="{{ product.name }}">
                                                 {% else %}
-                                                    <img class="wishlist-image mr-3" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                                    <img class="wishlist-image mr-2" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                                 {% endif %}
-                                                <div class="media-body">
+                                                <div class="media-body mr-2">
                                                     <h6 class="my-0">{{ product.name }}</h6>
                                                     <p class="my-0 text-muted">Price: €{{ product.price }}</p>
                                                 </div>
                                                 <div>
-                                                    <a href="{% url 'add_to_bag' product.id %}?quantity=1" class="btn btn-primary">Add to Cart</a>
-                                                    <a href="{% url 'remove_from_wishlist' product.id %}" class="btn btn-danger">Remove</a>
+                                                    <a href="{% url 'add_to_bag' product.id %}?quantity=1" class="btn btn-sm btn-outline-primary mb-2">Add to Cart</a>
+                                                    <a href="{% url 'remove_from_wishlist' product.id %}" class="btn btn-sm btn-outline-danger mb-2">Remove</a>
                                                 </div>
                                             </div>
                                         </div>

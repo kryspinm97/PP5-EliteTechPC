@@ -36,20 +36,23 @@ def products_prebuiltpc(request):
 
     # Sort products
     if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
+        sortkey = request.GET.get('sort')
+        sort = sortkey
 
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+        if sortkey == 'name':
+            sortkey = 'lower_name'
+            products = products.annotate(lower_name=Lower('name'))
+        elif sortkey == 'category':
+            sortkey = 'category__name'
+        elif sortkey == 'price':
+            sortkey = 'price'
+        else:
+            sortkey = 'name'
+
+        direction = request.GET.get('direction')
+        if direction == 'desc':
+            sortkey = f'-{sortkey}'
+        products = products.order_by(sortkey)
 
     # Pagination
     paginator = Paginator(products, 6)  # Display 6 products per page
@@ -64,6 +67,8 @@ def products_prebuiltpc(request):
         'current_categories': categories if category_values else None,
         'current_sorting': current_sorting,
         'current_categories_str': ','.join([cat.name for cat in categories]) if categories else '',
+        'sort': sort,
+        'direction': direction,
     }
 
     return render(request, 'products/products.html', context)

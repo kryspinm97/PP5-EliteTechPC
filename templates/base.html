@@ -56,7 +56,7 @@
                     <div class="input-group w-100">
                         <input class="form-control border rounded-0 border-black type=" name="q" placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit" aria-label="Search Box Button">
                                 <span>
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -122,7 +122,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col">
-                <h5 class="my-1 text-uppercase fw-bold">Free delivery on orders over €{{ free_delivery_threshold }}!</h5>
+                <p class="my-1 text-uppercase fw-bold">Free delivery on orders over €{{ free_delivery_threshold }}!</p>
             </div>
         </div>
     </header>
@@ -146,8 +146,8 @@
                                     <span class="asterisk">*</span>Indicates Required</div>
                                 <div class="mc-field-group">
                                     <label for="mce-EMAIL">Email Address<span class="asterisk">*</span></label>
-                                    <input type="email" name="EMAIL" class="required email form-control"
-                                        id="mce-EMAIL" required="" style="width: 100%;" value="">
+                                    <input type="email" name="EMAIL" class="required email form-control" id="mce-EMAIL"
+                                        required="required" style="width: 100%;" value="" autocomplete="email">
                                 </div>
                                 <div id="mce-responses" class="clear foot">
                                     <div class="response" id="mce-error-response" style="display: none;"></div>
@@ -178,25 +178,26 @@
                 <div class="footer-headers fa-footer-icons container text-center text-md-start mt-4">
                     <div class="row py-4">
                         <div class=" col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold py-2"><i class="fas fa-gem me-3 footer-fa-icon-colors"></i> Elite Tech PC </h6>
+                            <p class="text-uppercase fw-bold py-2"><i class="fas fa-gem me-3 footer-fa-icon-colors"></i> Elite Tech PC </p>
                             <hr>
                             <p>Your top choice for high-performance computers and premium components.
                             Experience excellence in every detail. Upgrade to EliteTechPC today!</p>
                         </div>
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="text-uppercase fw-bold py-2"><i class="fa-brands fa-product-hunt"></i> Products </h6>
+                            <p class="text-uppercase fw-bold py-2"><i class="fa-brands fa-product-hunt"></i> Products </p>
                             <hr>
                             <p><a href="{% url 'products' %}?category=low-end" class="text-reset">Entry Level</a></p>
                             <p><a href="{% url 'products' %}?category=mid-end" class="text-reset">Mid Level</a></p>
                             <p><a href="{% url 'products' %}?category=high-end" class="text-reset">High End</a></p>
                         </div>
                         <div class="fa-footer-icons col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <h6 class="text-uppercase fw-bold py-2"><i class="fa-solid fa-address-book"></i> Contact </h6>
+                            <p class="text-uppercase fw-bold py-2"><i class="fa-solid fa-address-book"></i> Contact </p>
                             <hr>
-                            <p><i class="fas fa-home me-3 footer-fa-icon-colors"></i>Dublin, Ireland</p>
-                            <p><i class="fas fa-envelope me-3 footer-fa-icon-colors"></i>info@elitetechpc.com</p>
-                            <p><i class="fas fa-phone me-3 footer-fa-icon-colors"></i>+ 01 234 567 88</p>
-                            <p><i class="fas fa-print me-3 footer-fa-icon-colors"></i>  + 01 234 567 89</p>
+                            <p><i class="fas fa-home me-3 footer-fa-icon-colors"></i> Dublin, Ireland</p>
+                            <p><i class="fas fa-envelope me-3 footer-fa-icon-colors"></i> info@elitetechpc.com</p>
+                            <p><i class="fas fa-phone me-3 footer-fa-icon-colors"></i> + 01 234 567 88</p>
+                            <p><i class="fas fa-print me-3 footer-fa-icon-colors"></i> + 01 234 567 89</p>
+                            <a href="https://www.facebook.com/profile.php?id=100094505344143" class="btn btn-warning rounded-0"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
                         </div>
                     </div>
                 </div>

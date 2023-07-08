@@ -20,7 +20,7 @@
                                     <div class="lead mb-0 text-muted">
                                         <i class="fas fa-star"></i>
                                         {{ product.rating }}/5
-                                        <a class="btn-sm rounded-0" href="{% url 'add_to_wishlist' product.id %}" data-product-id="{{ product.id }}">
+                                        <a class="btn-sm rounded-0" href="{% url 'add_to_wishlist' product.id %}" data-product-id="{{ product.id }}" name="WishlistHeart">
                                             <i class="fa-regular fa-heart" id="heart-icon"></i>
                                         </a>
                                     </div>
@@ -78,15 +78,15 @@
                                             <div class="form-group">
                                                 <div class="input-group justify-content-center">
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-danger" data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                        <button class="decrement-qty btn btn-danger" data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}" aria-label="Decrement Quantity Button">
                                                             <span class="icon">
                                                                 <i class="fas fa-minus"></i>
                                                             </span>
                                                         </button>
                                                     </div>
-                                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="10" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="10" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" aria-label="Quantity Input Box">
                                                         <div class="input-group-append">
-                                                            <button class="increment-qty btn btn-success" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                            <button class="increment-qty btn btn-success" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}" aria-label="Increment Quantity Button">
                                                                 <span class="icon">
                                                                     <i class="fas fa-plus"></i>
                                                                 </span>
