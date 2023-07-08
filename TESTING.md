@@ -148,4 +148,15 @@ I have also put the website through the WAVE accessibility testing with the foll
 ![ScreenShot](./documents/testing_images/WAVE-SCREENSHOT-HOME.png)
 
 
+## Website Responsiveness ##
+
+The website has been developed to the most extent by the Front-End Library called Bootstrap. It is an amazing help towards front-end development that has a ton of features that help with the alignment of content around the website.
+I have tested the website on multiple devices and it works great.
+I have used the Chrome Development tools to adjust things accordingly to suit as much devices as possible.
+
 ## Bugs / Issues ##
+
+Here I document any known to me or to anyone else that spots any bugs or issues currently going on with the site. 
+
+1. On specially small screen sizes the text from the dropdown menu from My Account navbar , overflows off screen as it is "too long" , which really is just a visual issue.
+

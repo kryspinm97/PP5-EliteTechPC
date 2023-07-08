@@ -182,6 +182,10 @@ hr {
   background-color: #FFC107;
 }
 
+#delivery-banner h3 {
+  font-size: 1.4rem;
+}
+
 .navbar-brand-pc {
   font-weight: 800;
   color: #007bff;
@@ -457,5 +461,15 @@ hr {
 
   .hero-text h1 {
     font-size: 3rem;
+  }
+
+  #delivery-banner h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  #delivery-banner h3 {
+    font-size: 1.2rem;
   }
 }
