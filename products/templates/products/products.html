@@ -60,7 +60,7 @@
                                                 <img class="index-image" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}"></a>
                                             {% endif %}
                                             <div class="card-body text-center">
-                                                <h5 class="card-title fw-bold text-center text-uppercase">{{ product.name }}</h5>
+                                                <a href="{% url 'products_details' product.id %}" class="card-title fw-bold text-center text-uppercase">{{ product.name }}</ah>
                                                 {% if product.category %}
                                                     <p class="small mt-1 mb-0">
                                                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">

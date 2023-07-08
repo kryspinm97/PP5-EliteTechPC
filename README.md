@@ -22,7 +22,6 @@ The live version of the website is available for you here : <a href="https://eli
     * [Newsletter](#newsletter)
 
 * ## [Search Engine Optimization](#search-engine-optimization---seo-1)
-    * [Keywords](#keywords)
     * [Sitemap](#sitemap-file)
     * [Robots](#robots-file)
 
@@ -245,9 +244,7 @@ Wordtracker snippet goes here -
 
 I used the provided link by code institute for the XML-Sitemaps generator. It was used to create my Sitemaps.xml file which has been added to the root directory of this project. I have used the live deployed site for the generation of this file.
 
-* Link to XML-Sitemaps :
 * Link to Live Site : <a href="https://elite-tech-pc-e966cb86c987.herokuapp.com">EliteTechPC</a>
-* Link to Sitemap.xml : 
 
 ## Robots File ##
 
