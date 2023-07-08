@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="hero-image-home jumbotron-overlay jumbotron-fluid py-md-5 d-flex align-items-center">
+  <div class="container d-flex justify-content-center">
+    <div class="hero-text text-center text-wrap py-3 mt-3">
+      <h1>Oops, the page you're looking for can't be found.</h1>
+      <p>We're sorry, but the page you're looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+      <a href="{% url 'home' %}" class="hero-text-button btn btn-primary rounded-0 btn-lg text-uppercase py-3" aria-label="Return Home Button">Return Home</a>
+    </div>
+  </div>
+</div>
+
+<div class="container align-items-center text-center py-3">
+  <h2 class="section-heading">Here are some helpful links instead:</h2>
+  <hr>
+</div>
+
+<section class="py-1">
+  <div class="container align-items-center justify-content-center">
+    <div class="row">
+      <div class="col-md-4 py-4">
+        <div class="card card-home h-100">
+          <div class="card-body text-center">
+            <h3 class="card-title fw-bold text-center text-uppercase">Entry Level</h3>
+            <p class="card-text text">Explore our Entry Level builds</p>
+            <a href="{% url 'products' %}?category=low-end" class="btn btn-warning rounded-0 text-uppercase py-2" aria-label="See More - Budget Computers">
+              See More
+              <span class="sr-only">Navigate to Budget Computers Category</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 py-4">
+        <div class="card card-home h-100">
+          <div class="card-body text-center">
+            <h3 class="card-title fw-bold text-center text-uppercase">Mid Level</h3>
+            <p class="card-text">Explore our Mid Level builds</p>
+            <a href="{% url 'products' %}?category=mid-end" class="btn btn-warning rounded-0 text-uppercase py-2" aria-label="See More - Mid-Level Computers">
+              See More
+              <span class="sr-only">Navigate to Mid-Level Computers Category</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 py-4">
+        <div class="card card-home h-100">
+          <div class="card-body text-center">
+            <h3 class="card-title fw-bold text-center text-uppercase">High Level</h3>
+            <p class="card-text">Explore our High Level builds</p>
+            <a href="{% url 'products' %}?category=high-end" class="btn btn-warning rounded-0 text-uppercase py-2" aria-label="See More - High-End Computers">
+              See More
+              <span class="sr-only">Navigate to High-End Computers Category</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>
+
+{% endblock %}

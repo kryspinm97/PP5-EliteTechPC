@@ -16,11 +16,12 @@ Here is the documentation containing all the testing carried out in this project
     * [Home Page](#home-page--screenshot)
     * [Contact Us](#navbar--screenshot)
 * [Validators](#automated-testing)
-    * [CI Python Linter](#automated-testing)
-    * [W3C CSS Validator](#automated-testing)
-    * [W3C HTML Validator](#automated-testing)
-    * [Lighthouse](#automated-testing)
-* [Bugs / Issues](#automated-testing)
+    * [CI Python Linter](#ci-python-linter)
+    * [W3C CSS Validator](#w3c-css-validations)
+    * [W3C HTML Validator](#w3c-html-validations)
+    * [Lighthouse](#lighthouse-tests)
+    * [WAVE](#wave)
+* [Bugs / Issues](#)
 
 
 ## Manual Testing ##
@@ -97,3 +98,53 @@ I will attach the test that were done and tested by me to as much extent as I co
 * Code Institue Python linter, all these files were put through the tester and nothing of major came up. Here are the results :
 
 ![ScreenShot](./documents/testing_images/Python%20Linter%20Testing.png)
+
+
+## Lighthouse Tests ##
+
+I have completed a series of lighthouse tests for the performance of the site and other aspects.
+
+### Home Page Desktop : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-homepage-desktop.png)
+<hr>
+
+### Products Page Desktop : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-products-desktop.png)
+<hr>
+
+### Products Details Page Desktop : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-product_details-desktop.png)
+<hr>
+
+### Contact Us Page Desktop : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-contactus-desktop.png)
+<hr>
+
+### Shopping Cart Page Desktop : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-bag-desktop.png)
+<hr>
+
+### Checkout Page Desktop : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-checkout-desktop.png
+<hr>
+
+### Home Page Mobile : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-homepage-mobile.png)
+<hr>
+
+### Products Page Mobile : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-products-mobile.png)
+<hr>
+
+### Products Details Page Mobile : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-product_details-mobile.png)
+<hr>
+
+### Contact Us Page Mobile : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-contactus-mobile.png)
+<hr>
+
+### Shopping Cart Page Mobile : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-bag-mobile.png)
+<hr>
+
+### Checkout Page Mobile : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-checkout-mobile.png)
+<hr>
+
+* From these tests I can see that performance wise the website could be initially improved, most likely it is due to image sizing/formats. I think with further optimizations the website can achieve fantastic results here.
+
+## WAVE ##
+
+
+
+
+## Bugs / Issues ##

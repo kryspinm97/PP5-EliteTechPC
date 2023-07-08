@@ -93,13 +93,13 @@
                                                         {% elif request.user.is_authenticated %}
                                                             <div class="text-right mt-2">
                                                                 <a class="btn-sm btn-outline-primary rounded-0 wishlist-btn" href="{% url 'add_to_wishlist' product.id %}" data-product-id="{{ product.id }}">
-                                                                    <i class="fa-regular fa-heart"></i>
+                                                                    <i class="fa-regular fa-heart heart-icon"></i>
                                                                 </a>
                                                             </div>
                                                         {% else %}
                                                             <div class="text-right mt-2">
                                                                 <a class="btn-sm rounded-0" href="{% url 'account_login' %}">
-                                                                    <i class="fa-regular fa-heart"></i>
+                                                                    <i class="fa-regular fa-heart heart-icon"></i>
                                                                 </a>
                                                             </div>
                                                         {% endif %}

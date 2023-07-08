@@ -126,7 +126,10 @@ hr {
 .hero-text h1 {
   font-size: 4rem;
   font-weight: 900;
-  color: #ffff;
+  color: #FFFFFF;
+  background-color: #343a404f;
+  padding: 20px;
+  border-radius: 25px;
   text-transform: uppercase;
 }
 
@@ -177,10 +180,6 @@ hr {
 #delivery-banner {
   color: #343A40;
   background-color: #FFC107;
-}
-
-#delivery-banner p {
-  font-size: 1.5rem;
 }
 
 .navbar-brand-pc {
@@ -271,16 +270,16 @@ hr {
   border-color: #007bff !important;
 }
 
-#heart-icon {
+.heart-icon {
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-#heart-icon:hover,
-#heart-icon:focus {
+.heart-icon:hover,
+.heart-icon:focus {
   transform: scale(1.1);
 }
 
-#heart-icon:active {
+.heart-icon:active {
   transform: scale(1.2);
 }
 
