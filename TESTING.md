@@ -21,8 +21,7 @@ Here is the documentation containing all the testing carried out in this project
     * [W3C HTML Validator](#w3c-html-validations)
     * [Lighthouse](#lighthouse-tests)
     * [WAVE](#wave)
-* [Bugs / Issues](#)
-
+* [Bugs / Issues](#bugs--issues))
 
 ## Manual Testing ##
 
@@ -144,7 +143,9 @@ I have completed a series of lighthouse tests for the performance of the site an
 
 ## WAVE ##
 
+I have also put the website through the WAVE accessibility testing with the following results :
 
+![ScreenShot](./documents/testing_images/WAVE-SCREENSHOT-HOME.png)
 
 
 ## Bugs / Issues ##

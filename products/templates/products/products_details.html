@@ -20,7 +20,7 @@
                                     <div class="lead mb-0 text-muted">
                                         <i class="fas fa-star"></i>
                                         {{ product.rating }}/5
-                                        <a class="btn-sm rounded-0" href="{% url 'add_to_wishlist' product.id %}" data-product-id="{{ product.id }}" name="WishlistHeart">
+                                        <a class="btn-sm rounded-0" href="{% url 'add_to_wishlist' product.id %}" data-product-id="{{ product.id }}" aria-label="Add to Wishlist Heart">
                                             <i class="fa-regular fa-heart heart-icon"></i>
                                         </a>
                                     </div>
