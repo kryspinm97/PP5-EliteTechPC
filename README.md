@@ -3,7 +3,7 @@
 * Here I have created EliteTechPC - Prebuilt Computers which is a B2C e-commerce site. The site allows the users to have a look around for their next potential home office pc, a workstation for heavy duty work or even a high performance gaming machine. There is loads of features currently implemented into the website with more to come.
 Registered users gain access to My Profile which lets them update their delivery information and track their orders.
 
-![ScreenShot](./documents/readme_images/Ami-Responsive.png)
+![ScreenShot](./documents/readme_images/ResponsiveMockup.png)
 
 The live version of the website is available for you here : <a href="https://elite-tech-pc-e966cb86c987.herokuapp.com/" target="_blank">EliteTechPC</a>
 

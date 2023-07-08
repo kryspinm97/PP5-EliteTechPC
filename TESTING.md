@@ -21,7 +21,7 @@ Here is the documentation containing all the testing carried out in this project
     * [W3C HTML Validator](#w3c-html-validations)
     * [Lighthouse](#lighthouse-tests)
     * [WAVE](#wave)
-* [Bugs / Issues](#bugs--issues))
+* [Bugs / Issues](#bugs--issues)
 
 ## Manual Testing ##
 

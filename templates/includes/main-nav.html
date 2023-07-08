@@ -3,6 +3,9 @@
 
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-lg-none">
+            <a class="nav-link font-weight-bold" href="{% url 'home' %}">Home</a>
+        </li>
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Products</a>
             <div class="dropdown-menu rounded-0 border-0" aria-labelledby="all-products-link">
@@ -23,6 +26,7 @@
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link mr-5" href="{% url 'contact' %}" id="contact-us-link">Contact Us</a>
         </li>
+
     </ul>
 </div>
 

@@ -47,13 +47,13 @@ hr {
 
 .card-title {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color:#343A40;
   text-decoration: none;
 }
 
 .card-title:hover {
-  color:#FFC107;
+  color:#007bff;
   text-decoration: none;
 }
 
@@ -94,7 +94,7 @@ hr {
 }
 
 .card-home:hover .card-body {
-  transform: translateY(10px);
+  transform: translateY(2px);
 }
 
 .index-image {
