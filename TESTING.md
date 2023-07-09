@@ -27,6 +27,7 @@ Here is the documentation containing all the testing carried out in this project
 
 Here I have completed manual testing of the sites functions and accessing certain points as a user and non-user. 
 I will attach the test that were done and tested by me to as much extent as I could every point of the page.
+I have went through whatever I functionality wise could myself, and noted all the results in an excel sheet.
 
 ## Navbar : ![ScreenShot](./documents/testing_images/Navbar-tests-manual.png)
 
@@ -118,7 +119,7 @@ I have completed a series of lighthouse tests for the performance of the site an
 ### Shopping Cart Page Desktop : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-bag-desktop.png)
 <hr>
 
-### Checkout Page Desktop : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-checkout-desktop.png
+### Checkout Page Desktop : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-checkout-desktop.png)
 <hr>
 
 ### Home Page Mobile : ![ScreenShot](./documents/testing_images/lighthouse_screenshots/Lighthouse-homepage-mobile.png)
@@ -160,3 +161,5 @@ Here I document any known to me or to anyone else that spots any bugs or issues 
 
 1. On specially small screen sizes the text from the dropdown menu from My Account navbar , overflows off screen as it is "too long" , which really is just a visual issue.
 
+        Any further issues upon inspection and review will be noted here.
+        I am dedicated to keeping this site free of any issues to provide the best experience for users as possible.

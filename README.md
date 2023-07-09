@@ -17,11 +17,14 @@ The live version of the website is available for you here : <a href="https://eli
    * [Surface](#4-surface)
 
 * ## [E-Commerce Model](#e-commerce-model-1)
+    * [Business Owners Goals](#business-owner)
+    * [Project Goal](#project-goals)
     * [Social Media](#social-media)
     * [Marketing](#marketing)
     * [Newsletter](#newsletter)
 
 * ## [Search Engine Optimization](#search-engine-optimization---seo-1)
+    * [Meta](#meta-descriptions)
     * [Sitemap](#sitemap-file)
     * [Robots](#robots-file)
 
@@ -209,13 +212,26 @@ The layout of the EliteTechPC website is designed to be responsive and user-frie
 
     ![ScreenShot](./documents/readme_images/Footer.png)
 
+7. Profile Page :
+    * This section allows the user to manage their delivery information, track their Order History/Order Number/Items and date.
+    * Also provides the user with a Wishlist they can add their potential items they would like into for a future purchase.
+
+    ![ScreenShot](./documents/readme_images/profile-manager.png)
+
 Overall, EliteTechPC website layout aims to provide a visually appealing and intuitive user interface, ensuring that users can easily navigate, explore and engage with the range of prebuilt computers offered by the store.
 
+* [Back To Top Link](#elitetechpc---prebuilt-pc-store)
 
 # E-Commerce Model #
 
 EliteTechPC is an e-commerce platform that specializes in selling high-quality prebuilt PCs to consumers. Our mission is to provide customers with the top-of-the-line computer systems that deliver exceptional performance, reliability and value. Target market includes both gaming enthusiasts and professionals in need of high-performance machines. We cater to individuals who value superior hardware components, seamless functionality and latest advancements in technology.
 This is a Business to Consumer model and it is catered to be as simple yet intuitive for the consumer along with the sign-ups to the newsletter with potential deals and more.
+
+# Business Owner #
+The business owner's goal is to establish a successful eCommerce platform for selling prebuilt PCs. They aim to expand their customer base by offering a visually appealing website with a seamless and secure payment system. The owner also wants to have the ability to manage the product inventory and make updates or changes through a secure and interactive front-end interface. There is a lot of startups starting these type of stores and there is a lot of competition. 
+
+# Project Goals #
+EliteTechPC is my final Portfolio Project for Code Institute's Diploma in Full Stack Software Development (E-Commerce Applications). It is a Full Stack website focused on implementing business logic to manage a centralized database.
 
 
 # Social Media #
@@ -233,17 +249,19 @@ I have also included into the website a Mailchimp service that handles the newsl
 
 ![ScreenShot](./documents/readme_images/Footer.png)
 
+* [Back To Top Link](#elitetechpc---prebuilt-pc-store)
+
 
 # Search Engine Optimization - SEO #
 
-## Keywords ##
+## Meta Descriptions ##
 
-Wordtracker snippet goes here -
+Where possible in the project I have supplied relevant information regarding the website to be crawlable well by the search engines, providing the correct meta keywords and description.
 
 ## Sitemap File ##
 
 I used the provided link by code institute for the XML-Sitemaps generator. It was used to create my Sitemaps.xml file which has been added to the root directory of this project. I have used the live deployed site for the generation of this file.
-
+[SitemapXML](sitemap.xml)
 * Link to Live Site : <a href="https://elite-tech-pc-e966cb86c987.herokuapp.com">EliteTechPC</a>
 
 ## Robots File ##
@@ -251,6 +269,10 @@ I used the provided link by code institute for the XML-Sitemaps generator. It wa
 Here is the robots.txt file snippet for this project :
 
 ![ScreenShot](./documents/readme_images/Robots.txt.png)
+
+<hr>
+
+* [Back To Top Link](#elitetechpc---prebuilt-pc-store)
 
 
 
@@ -261,8 +283,9 @@ Here is the robots.txt file snippet for this project :
     - You can view the testing here : [Testing.MD](./TESTING.md)
 
 ## Defensive Programming ##
-* The project has been implemented with the necessary features here to have the utmost safety in regards of data/access to forbidden areas. There's User authentication and authorization implemented in all areas and more areas are protected using the 'Login_required' decorators.
+* The project has been implemented with the necessary features here to have the utmost safety in regards of data/access to forbidden areas. There's User authentication and authorization implemented in all areas and more areas are protected using the 'Login_required' decorators. Django auth is a very well built system that has that additional layer of authentication/security..
 
+* [Back To Top Link](#elitetechpc---prebuilt-pc-store)
 
 # Deployment #
 
@@ -569,6 +592,8 @@ With the following commands :
        2. git commit -m "Commit Message"
        3. git push
 
+* [Back To Top Link](#elitetechpc---prebuilt-pc-store)
+
 
 ## HEROKU ## 
 
@@ -621,6 +646,8 @@ The steps are as follows :
 5. Type 'git clone' and paste the HTTPS link you copied from GitHub
 6. Press enter, the Forked repository will now clone to your preferred development method on your local machine.
 
+* [Back To Top Link](#elitetechpc---prebuilt-pc-store)
+
 # Technologies Used #
 
 * ## Languages ##
@@ -645,8 +672,9 @@ The steps are as follows :
   * <a href="https://www.lucidchart.com/pages/">Lucidchart (Online Application for Flowcharts/Diagrams)</a>
   * <a href="https://mailchimp.com/">Mailchimp (Email Newsletter Automation)</a>
   * <a href="https://stripe.com/ie/">Stripe (Payment Processing Platform)</a>
+  <hr>
 
-
+* [Back To Top Link](#elitetechpc---prebuilt-pc-store)
 
 # Credits #
 

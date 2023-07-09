@@ -3,10 +3,6 @@
 
 {% block extra_title %} -- My Profile{% endblock %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">
-{% endblock %}
-
 {% block content %}
     <div class="container profile-forms">
         <div class="py-3 text-center">
@@ -94,11 +90,11 @@
                                                 {% else %}
                                                     <img class="wishlist-image mr-2" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                                 {% endif %}
-                                                <div class="media-body mr-2">
+                                                <div class="media-body text-center mr-2">
                                                     <h6 class="my-0">{{ product.name }}</h6>
                                                     <p class="my-0 text-muted">Price: €{{ product.price }}</p>
                                                 </div>
-                                                <div>
+                                                <div class="text-center p-2">
                                                     <a href="{% url 'add_to_bag' product.id %}?quantity=1" class="btn btn-sm btn-outline-primary mb-2">Add to Cart</a>
                                                     <a href="{% url 'remove_from_wishlist' product.id %}" class="btn btn-sm btn-outline-danger mb-2">Remove</a>
                                                 </div>
