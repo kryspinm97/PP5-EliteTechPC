@@ -159,7 +159,9 @@ I have used the Chrome Development tools to adjust things accordingly to suit as
 
 Here I document any known to me or to anyone else that spots any bugs or issues currently going on with the site. 
 
-1. On specially small screen sizes the text from the dropdown menu from My Account navbar , overflows off screen as it is "too long" , which really is just a visual issue.
+        1. On specially small screen sizes the text from the dropdown menu from My Account navbar , overflows off screen as it is "too long" , which really is just a visual issue.
 
-        Any further issues upon inspection and review will be noted here.
-        I am dedicated to keeping this site free of any issues to provide the best experience for users as possible.
+        2. On further inspection I have found by previously trying to fix the sorting by price filter on the products page I have made another bug that the sorting by ratings doesn't work properly. Also other filter types will need to be  adjusted to better suit the products as they don't seem to be working as intended either apart from Pricing from low-high / high-low. That issue will have to be addressed as soon as possible.
+
+Any further issues upon inspection and review will be noted here.
+I am dedicated to keeping this site free of any issues to provide the best experience for users as possible.
